@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
