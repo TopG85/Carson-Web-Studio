@@ -1,7 +1,175 @@
-<h1>Vinelife Church Wilmslow</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>
-Website redesign improving navigation, structure and mobile usability.
-</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinelife Church Wilmslow | Carson Web Studio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&display=swap"
+        rel="stylesheet">
+</head>
 
-<img src="../images/vinelife-homepage.png" alt="Vinelife homepage">
+<body>
+    <header>
+        <nav>
+            <div class="navbar-inner">
+                <h1>Carson Web Studio</h1>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="page-wrapper">
+        <main>
+            <section class="project-hero">
+                <h1>Vinelife Church Wilmslow</h1>
+                <p class="project-short-desc">
+                    Website redesign for a local church focused on improving structure, navigation and mobile usability.
+                </p>
+                <ul class="project-details">
+                    <li><strong>Role:</strong> Web Design &amp; Development</li>
+                    <li><strong>Year:</strong> 2026</li>
+                    <li><strong>Technologies:</strong> HTML, Tailwind CSS, JavaScript, Google Calendar API</li>
+                </ul>
+                <a class="project-live-btn" href="https://topg85.github.io/vinelifewilmslow/index.html" target="_blank"
+                    rel="noopener"></a>
+                <button class="project-action-btn orange-btn"
+                    onclick="window.open('https://topg85.github.io/vinelifewilmslow/index.html','_blank')">Open Vinelife
+                    Site</button>
+            </section>
+
+            <img src="../images/vinelifescreenshot.png" alt="Vinelife homepage" class="project-main-img">
+
+            <section class="project-overview">
+                <h2>Project Overview</h2>
+                <p>
+                    Vinelife Church Wilmslow is a welcoming evangelical church based in Wilmslow, Cheshire. The aim of
+                    the redesign was to create a modern website that clearly communicates the church’s activities and
+                    makes it easier for visitors to find important information such as service times and events.
+                </p>
+                <ul style="margin-top:1rem;">
+                    <li>Added a responsive navigation bar for easy access to all sections</li>
+                    <li>Integrated Google Calendar for automatic event updates</li>
+                    <li>Implemented “Thought for the Day” with dynamic scripture content</li>
+                    <li>Enhanced mobile usability and accessibility</li>
+                </ul>
+            </section>
+
+            <section class="project-problem">
+                <h2>The Problem</h2>
+                <ul>
+                    <li>Difficult navigation <img src="../images/difficultnavigation.png"
+                            alt="Difficult Navigation" style="max-width:100%;height:auto;border-radius:8px;"></li>
+                    <li>No clear structure</li>
+                    <li>Important information hard to find</li>
+                    <li>Links not working correctly</li>
+                    <li>Not optimised for mobile devices</li>
+                </ul>
+            </section>
+
+            <section class="project-solution">
+                <h2>The Solution</h2>
+                <ul>
+                    <li>Creating a clear navigation structure</li>
+                    <li>Dividing the site into logical sections</li>
+                    <li>Improving readability and layout</li>
+                    <li>Making the website responsive for mobile devices</li>
+                    <li>Integrating a calendar system to display upcoming meetings</li>
+                </ul>
+            </section>
+
+            <section class="project-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Responsive Design:</strong> The site adapts smoothly across desktop, tablet and mobile
+                        screens.</li>
+                    <li><strong>Events Calendar Integration:</strong> Using the Google Calendar API, monthly worship
+                        meetings update automatically.</li>
+                    <li><strong>Clear Navigation:</strong> A simple navigation system allows visitors to quickly access
+                        important sections.</li>
+                    <li><strong>Thought for the Day:</strong> Dynamic scripture content displayed using a Bible verse
+                        API.</li>
+                </ul>
+            </section>
+
+            <section class="project-screenshots">
+                <h2>Screenshots / Visuals</h2>
+                <ul>
+                    <li style="list-style:none;padding:0;margin:0;">
+                        <a href="#" class="enlarge-img-link" style="display:inline-block;max-width:100%;">
+                            <img src="../images/alldevices.png" alt="All devices screenshot"
+                                style="max-width:1000px;height:auto;box-shadow:0 2px 16px rgba(30,41,59,0.18);border-radius:8px;cursor:zoom-in;" />
+                        </a>
+                        <div style="font-size:0.95rem;color:#888;margin-top:0.3rem;">Click to enlarge</div>
+                        <div id="modal-alldevices" class="img-modal"
+                            style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+                            <span class="close-modal"
+                                style="position:absolute;top:32px;right:48px;font-size:3rem;color:#fff;cursor:pointer;font-weight:bold;">&times;</span>
+                            <img src="../images/alldevices.png" alt="All devices screenshot"
+                                style="max-width:98vw;max-height:90vh;border-radius:12px;box-shadow:0 4px 32px #000;display:block;margin:auto;" />
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var link = document.querySelector('.enlarge-img-link');
+                                var modal = document.getElementById('modal-alldevices');
+                                var close = modal.querySelector('.close-modal');
+                                link.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    modal.style.display = 'flex';
+                                });
+                                close.addEventListener('click', function () {
+                                    modal.style.display = 'none';
+                                });
+                                modal.addEventListener('click', function (e) {
+                                    if (e.target === modal) modal.style.display = 'none';
+                                });
+                                document.addEventListener('keydown', function (e) {
+                                    if (e.key === 'Escape') modal.style.display = 'none';
+                                });
+                            });
+                        </script>
+                    </li>
+                    <!-- Add more screenshots as needed -->
+                </ul>
+            </section>
+
+            <section class="project-technologies">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>Tailwind CSS</li>
+                    <li>JavaScript</li>
+                    <li>Google Calendar API</li>
+                    <li>Responsive design techniques</li>
+                </ul>
+            </section>
+
+            <section class="project-outcome">
+                <h2>Outcome</h2>
+                <p>
+                    The redesigned website provides a clear and welcoming digital presence for the church. Visitors can
+                    easily find service times, upcoming events and information about the church community.
+                </p>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Links</h2>
+                <a class="project-live-btn" href="https://topg85.github.io/vinelifewilmslow/index.html" target="_blank"
+                    rel="noopener"></a>
+                <button class="project-action-btn orange-btn"
+                    onclick="window.open('https://github.com/TopG85/vinelifewilmslow','_blank')">Open GitHub Repository</button>
+            </section>
+
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 Carson Web Studio. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
