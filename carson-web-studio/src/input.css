@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Exo:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Use Exo for body, Bungee for headings */
+html, body {
+	font-family: 'Exo', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6, .bungee-regular {
+	font-family: 'Bungee', sans-serif !important;
+	font-weight: 400;
+	font-style: normal;
+}
+.exo {
+	font-family: 'Exo', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+html {
+	@apply font-sans;
+}
+/* ...existing code... */
+
+
+@keyframes gradient-move {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.animated-gradient {
+	background: linear-gradient(120deg, #1e3a8a, #6d28d9, #1e293b, #9333ea);
+	background-size: 300% 300%;
+	animation: gradient-move 10s ease-in-out infinite;
+}
+
+body {
+	@apply bg-gradient-to-b from-blue-900 to-purple-900 min-h-screen font-sans text-white text-base;
+}
+
+	h1, h2, h3, h4, h5, h6 {
+		@apply font-heading;
+	}
+
+nav.bg-gradient-to-b {
+	@apply py-6;
+}
+
+.navbar-inner h1 {
+	@apply text-3xl;
+}
+
+.navbar-inner ul {
+	@apply text-xl;
+}
+
+.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.exo-<uniquifier> {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+
+
+/* Big Caslon FB Roman is not available on Google Fonts, so must be installed locally or via Adobe Fonts if needed. Helvetica is system default. */
+.btn-pulse {
+  box-shadow: 0 0 32px 8px #ff9100, 0 0 8px 2px #fff200;
+  filter: brightness(1.2) saturate(1.5);
+  transition: box-shadow 0.3s, filter 0.3s;
+}

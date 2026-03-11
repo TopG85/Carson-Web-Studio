@@ -7,48 +7,46 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="min-h-screen flex flex-col bg-gradient-to-b from-blue-900 to-purple-900 font-sans text-white text-base">
 	<header>
-		<nav>
-			<div class="navbar-inner">
-				<h1>Carson Web Studio</h1>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li class="dropdown">
-						<a href="projects.html">Projects</a>
-						<ul class="dropdown-content">
-							<li><a href="projects/vinelife.html">Vinelife Church Wilmslow</a></li>
-							<!-- Add more project links here -->
-						</ul>
-					</li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
+	  <nav class="bg-gradient-to-b from-blue-900 to-purple-900 text-white shadow-lg">
+	    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+		<h1 class="text-2xl font-bold tracking-tight font-heading">Carson Web Studio</h1>
+	      <ul class="flex space-x-6 font-barlow text-lg">
+	        <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+	        <li class="relative group">
+	          <a href="projects.html" class="hover:text-orange-400 transition">Projects</a>
+	          <ul class="absolute left-0 mt-2 w-56 bg-blue-950 bg-opacity-95 rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20">
+	            <li><a href="projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church Wilmslow</a></li>
+	            <!-- Add more project links here -->
+	          </ul>
+	        </li>
+	        <li><a href="about.html" class="hover:text-orange-400 transition">About</a></li>
+	        <li><a href="contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+	      </ul>
+	    </div>
+	  </nav>
 	</header>
-	<div class="page-wrapper">
-	<main>
-		<h1>About</h1>
-		<img src="images/photofmen.jpeg" alt="Daniel Carson portrait" class="about-portrait">
-		<section class="about-me">
-			<p>I’m Daniel, a web designer and developer and the founder of Carson Web Studio. I design and build modern, responsive websites with a focus on clarity, usability and thoughtful visual design.</p>
-			<p>Before moving into web development, I spent several years working as a natural light portrait and fashion photographer. That experience developed my eye for composition, colour and visual storytelling — skills that now influence the way I approach web design.</p>
-			<p>I recently completed a Full Stack Software Development Diploma with Code Institute, where I developed practical skills in building responsive websites and web applications using HTML, CSS and JavaScript.</p>
-			<p>Through Carson Web Studio, I enjoy helping churches, charities and community organisations create websites that clearly communicate who they are and make it easy for people to connect with them.</p>
-		</section>
-		<section class="about-approach">
-			<h2>My Approach</h2>
-			<ul>
-				<li><strong>Clarity</strong><br>Making sure visitors can easily find the information they need.</li>
-				<li><strong>Visual Design</strong><br>Creating layouts that are clean, balanced and engaging.</li>
-				<li><strong>Usability</strong><br>Building responsive websites that work well across all devices.</li>
-			</ul>
-		</section>
-	</main>
-	</div>
-	<footer>
-		<p>&copy; 2026 Carson Web Studio. All rights reserved.</p>
-	</footer>
+	<section class="relative flex-1 flex flex-col justify-center items-center py-16">
+	  <main class="w-full max-w-3xl mx-auto text-center">
+		<h1 class="text-4xl font-bold text-white mb-8 font-heading">About</h1>
+	    <img src="images/photofmen.jpeg" alt="Daniel Carson portrait" class="mx-auto rounded-full w-40 h-40 object-cover mb-8 shadow-lg border-4 border-purple-900">
+	    <section class="mb-10 text-lg text-purple-100 space-y-4">
+	      <p>I’m Daniel, a web designer and developer and the founder of Carson Web Studio. I design and build modern, responsive websites with a focus on clarity, usability and thoughtful visual design.</p>
+	      <p>Before moving into web development, I spent several years working as a natural light portrait and fashion photographer. That experience developed my eye for composition, colour and visual storytelling — skills that now influence the way I approach web design.</p>
+	      <p>I recently completed a Full Stack Software Development Diploma with Code Institute, where I developed practical skills in building responsive websites and web applications using HTML, CSS and JavaScript.</p>
+	      <p>Through Carson Web Studio, I enjoy helping churches, charities and community organisations create websites that clearly communicate who they are and make it easy for people to connect with them.</p>
+	    </section>
+	    <section class="bg-blue-950 bg-opacity-80 rounded-lg p-8 shadow-lg">
+		<h2 class="text-2xl font-bold text-orange-400 mb-4 font-heading">My Approach</h2>
+	      <ul class="space-y-4 text-left text-white">
+	        <li><span class="font-bold">Clarity:</span> Making sure visitors can easily find the information they need.</li>
+	        <li><span class="font-bold">Visual Design:</span> Creating layouts that are clean, balanced and engaging.</li>
+	        <li><span class="font-bold">Usability:</span> Building responsive websites that work well across all devices.</li>
+	      </ul>
+	    </section>
+	  </main>
+	</section>
+
 </body>
 </html>

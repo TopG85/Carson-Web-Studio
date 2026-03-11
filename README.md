@@ -6,7 +6,9 @@ I design and build modern, responsive websites for churches, charities and organ
 
 ---
 
+
 ## 🚀 Recent Updates (March 2026)
+
 
 - **Navigation:**
 	- Consistent navbar on all pages with dropdown Projects menu (hover/focus to open)
@@ -32,6 +34,13 @@ I design and build modern, responsive websites for churches, charities and organ
 	- All images have rounded corners and consistent sizing
 	- Footer centered on all pages
 	- Improved mobile responsiveness and accessibility
+
+### March 2026 UI/UX Fixes
+- Improved spacing between headings and images for all project pages
+- Fixed image HTML: removed duplicate/malformed class/style attributes
+- Ensured all images use consistent border-radius (rounded corners)
+- Added vertical and horizontal spacing for better readability
+- Cleaned up HTML for valid, maintainable markup
 
 ---
 

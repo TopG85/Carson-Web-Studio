@@ -10,42 +10,40 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="navbar-inner">
-                <h1>Carson Web Studio</h1>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="projects.html">Projects</a>
-                        <ul class="dropdown-content">
-                            <li><a href="projects/vinelife.html">Vinelife Church Wilmslow</a></li>
-                            <!-- Add more project links here -->
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="page-wrapper">
-        <main>
-            <h1>Contact</h1>
-            <div style="text-align:center; margin:3rem 0;">
-                <div class="construction-emoji" style="font-size:4rem;line-height:1;display:inline-block;">🚧</div>
-                <h2 style="margin:1rem 0 0.5rem 0;">Page Under Construction</h2>
-                <p style="font-size:1.2rem;color:#888;">We're working hard to build this page for you!</p>
-                <div class="worker-emoji" style="font-size:3rem;margin-top:1.5rem;display:inline-block;">👷‍♂️</div>
-                <p style="font-size:1rem;color:#aaa;">Check back soon for updates.</p>
-                <p style="font-size:1.1rem;color:#888;">Email address: danielcarson@gmail.com</p>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <p>&copy; 2026 Carson Web Studio. All rights reserved.</p>
-    </footer>
+<body class="min-h-screen flex flex-col bg-gradient-to-b from-blue-900 to-purple-900 font-sans text-white text-base">
+        <header>
+            <nav class="bg-gradient-to-b from-blue-900 to-purple-900 text-white shadow-lg">
+                <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                    <h1 class="text-2xl font-bold tracking-tight font-heading">Carson Web Studio</h1>
+                    <ul class="flex space-x-6 font-barlow text-lg">
+                        <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+                        <li class="relative group">
+                            <a href="projects.html" class="hover:text-orange-400 transition">Projects</a>
+                            <ul class="absolute left-0 mt-2 w-56 bg-blue-950 bg-opacity-95 rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20">
+                                <li><a href="projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church Wilmslow</a></li>
+                                <!-- Add more project links here -->
+                            </ul>
+                        </li>
+                        <li><a href="about.html" class="hover:text-orange-400 transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="relative flex-1 flex flex-col justify-center items-center py-16">
+            <main class="w-full max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl font-bold text-white mb-8 font-heading">Contact</h1>
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="text-6xl">🚧</div>
+                    <h2 class="text-2xl text-orange-400 font-bold mt-2 mb-1">Page Under Construction</h2>
+                    <p class="text-lg text-purple-200">We're working hard to build this page for you!</p>
+                    <div class="text-5xl mt-6">👷‍♂️</div>
+                    <p class="text-base text-purple-300">Check back soon for updates.</p>
+                    <p class="text-lg text-purple-300">Email address: <span class="underline">danielcarson1985@gmail.com</span></p>
+                </div>
+            </main>
+        </section>
+
 </body>
 
 </html>

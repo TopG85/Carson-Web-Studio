@@ -7,34 +7,26 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="navbar-inner">
-                <h1>Carson Web Studio</h1>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="projects.html">Projects</a>
-                        <ul class="dropdown-content">
-                            <li><a href="projects/vinelife.html">Vinelife Church Wilmslow</a></li>
-                            <!-- Add more project links here -->
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+<body class="min-h-screen flex flex-col bg-gradient-to-b from-blue-900 to-purple-900 font-sans text-white text-base">
+        <header>
+            <nav class="bg-gradient-to-b from-blue-900 to-purple-900 text-white shadow-lg">
+                <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                    <h1 class="text-2xl font-bold tracking-tight font-heading">Carson Web Studio</h1>
+                    <ul class="flex space-x-6 font-barlow text-lg">
+                        <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+                        <li><a href="projects.html" class="hover:text-orange-400 transition">Projects</a></li>
+                        <li><a href="about.html" class="hover:text-orange-400 transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="relative min-h-screen flex flex-col justify-center items-center py-16 bg-no-repeat bg-center" style="background-image: url('images/heroimage.png'); background-size: 100vw 100vh;">
+            <div class="w-full max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl font-bold text-white mb-8 font-heading">Projects</h1>
+                <a href="projects/vinelife.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg btn-pulse">Vinelife Church Wilmslow</a>
             </div>
-        </nav>
-    </header>
-    <div class="page-wrapper">
-        <main>
-            <h1>Projects</h1>
-            <a href="projects/vinelife.html" class="project-action-btn orange-btn">Vinelife Church Wilmslow</a>
-        </main>
-    </div>
-    <footer>
-        <p>&copy; 2026 Carson Web Studio. All rights reserved.</p>
-    </footer>
+        </section>
+
 </body>
 </html>
