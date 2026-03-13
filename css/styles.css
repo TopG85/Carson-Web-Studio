@@ -1,3 +1,29 @@
+@keyframes wave {
+  0% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+  100% { transform: rotate(-20deg); }
+}
+.animate-wave {
+  animation: wave 1.2s infinite linear;
+  display: inline-block;
+  transform-origin: 60% 80%;
+}
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+  display: inline-block;
+}
+@keyframes flash {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(2.2); }
+}
+
+.animate-flash {
+  animation: flash 1s infinite;
+}
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Exo:wght@400;700&display=swap");
 *,
 :after,
