@@ -7,8 +7,8 @@ I design and build modern, responsive websites for churches, charities and organ
 ---
 
 
-## 🚀 Recent Updates (March 2026)
 
+## 🚀 Recent Updates (March 2026)
 
 - **Navigation:**
 	- Consistent navbar on all pages with dropdown Projects menu (hover/focus to open)
@@ -17,6 +17,7 @@ I design and build modern, responsive websites for churches, charities and organ
 	- Animated SVG wave background and moving hero shapes
 	- Modern, bold intro and subtitle
 - **Typography & Layout:**
+	- Bungee font restored and loaded on all pages for headings/branding
 	- Montserrat and Barlow fonts for all text
 	- Responsive `.page-wrapper` for consistent padding and centering
 - **About & Projects:**
@@ -28,12 +29,15 @@ I design and build modern, responsive websites for churches, charities and organ
 	- Projects dropdown appears on hover/focus for all pages
 	- Always accessible and styled for clarity
 - **Contact Page:**
-	- Under construction message with animated 🚧 and 👷‍♂️ emojis
+	- Under construction message with animated 🚧 (flashing) and 👷‍♂️ (waving) emojis
 	- Email address provided
 - **General Polish:**
 	- All images have rounded corners and consistent sizing
 	- Footer centered on all pages
 	- Improved mobile responsiveness and accessibility
+- **File & Folder Cleanup:**
+	- Removed old backup and carson-web-studio folders for a clean project root
+	- All site files now in the root directory
 
 ### March 2026 UI/UX Fixes
 - Improved spacing between headings and images for all project pages
