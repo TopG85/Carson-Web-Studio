@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carb Counter &amp; Dose Calculator | Carson Web Studio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
+    <header>
+        <nav class="bg-white text-blue-900 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
+                style="padding-top:2.5rem;padding-bottom:2.5rem;">
+                <h1 class="text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
+                <ul class="flex space-x-6 font-barlow text-lg">
+                    <li><a href="../index.html" class="cws-nav-link">Home</a></li>
+                    <li class="relative group">
+                        <a href="../projects.html" class="cws-nav-link">Projects</a>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20">
+                            <li><a href="vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
+                            <li><a href="bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
+                            <li><a href="carbcounter.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Carb Counter App</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="../contact.html" class="cws-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
+        <section class="project-hero">
+            <h1 class="text-4xl font-bold text-purple-800 mb-8 nunito-header">Carb Counter &amp; Dose Calculator</h1>
+            <p class="project-short-desc">
+                A personal health app that helps calculate insulin doses for meals and blood glucose corrections, built to make daily carb counting faster and more consistent.
+            </p>
+            <ul class="project-details">
+                <li><strong>Role:</strong> Personal Project — Design &amp; Development</li>
+                <li><strong>Year:</strong> 2026</li>
+                <li><strong>Technologies:</strong> React Native, Expo, React, JavaScript</li>
+                <img src="../images/carbcounterscreenshot.png" alt="Carb Counter app screenshot" class="inline-block"
+                    style="max-width:100%;height:auto;border-radius:8px;">
+            </ul>
+        </section>
+
+        <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header text-center mb-6">Project Links</h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="https://topg85.github.io/carb-counter-app/" target="_blank" rel="noopener"
+                class="inline-block bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <span>Live Site</span>
+                </span>
+            </a>
+            <a href="https://github.com/TopG85/carb-counter-app" target="_blank" rel="noopener"
+                class="inline-block bg-purple-100 hover:bg-purple-200 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub Repo</span>
+                </span>
+            </a>
+        </div>
+
+        <section class="project-overview">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">Project Overview</h2>
+            <p>
+                Carb Counter is a personal-use app built to make daily insulin dosing calculations faster and more consistent. It combines a searchable food library, a meal-dose calculator, and an optional blood glucose correction calculator into a single tool, with results logged automatically so previous doses are easy to review.
+            </p>
+            <ul style="margin-top:1rem;">
+                <li>Built-in food library with 40+ common items and their carb counts</li>
+                <li>Custom food entries that save and persist between sessions</li>
+                <li>Combined meal + correction dose calculation in one step</li>
+                <li>Deployed as both a native app (Expo) and a standalone web app</li>
+            </ul>
+        </section>
+
+        <section class="project-problem">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Problem</h2>
+            <ul>
+                <li>Manually calculating carb totals and insulin doses at every meal is repetitive and time-consuming</li>
+                <li>Mental maths under time pressure (e.g. before eating) increases the risk of small errors</li>
+                <li>No easy way to track a history of doses without a paper log or spreadsheet</li>
+                <li>Existing apps often don't support combining a meal dose and a correction dose in one calculation</li>
+            </ul>
+        </section>
+
+        <section class="project-solution">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Solution</h2>
+            <ul>
+                <li>A searchable, editable food library removes the need to memorise or look up carb values</li>
+                <li>Automatic dose calculation from a saved insulin-to-carb ratio, with rounding to 0.5 or 1.0 unit steps</li>
+                <li>An optional correction-dose calculator with built-in validation ranges and a high-dose warning</li>
+                <li>A running history log so every calculated dose is
