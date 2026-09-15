@@ -10,10 +10,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          'Bungee', 'sans-serif'
+          'Nunito', 'sans-serif'
         ],
         heading: [
-          'Bungee', 'sans-serif'
+          'Nunito', 'sans-serif'
         ],
       },
     },

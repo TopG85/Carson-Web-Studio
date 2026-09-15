@@ -6,28 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinelife Church Wilmslow | Carson Web Studio</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="min-h-screen flex flex-col animated-gradient font-sans text-white text-base">
+<body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
     <header>
-        <nav class="bg-gradient-to-b from-blue-900 to-purple-900 text-white shadow-lg">
-            <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                <h1 class="text-2xl font-bold tracking-tight font-heading">Carson Web Studio</h1>
+        <nav class="bg-white text-blue-900 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
+                style="padding-top:2.5rem;padding-bottom:2.5rem;">
+                <h1 class="text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
                 <ul class="flex space-x-6 font-barlow text-lg">
-                    <li><a href="../../index.html" class="hover:text-orange-400 transition">Home</a></li>
-                    <li><a href="../projects.html" class="hover:text-orange-400 transition">Projects</a></li>
-                    <li><a href="../about.html" class="hover:text-orange-400 transition">About</a></li>
-                    <li><a href="../contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+                    <li><a href="../index.html" class="cws-nav-link">Home</a></li>
+                    <li class="relative group">
+                        <a href="../projects.html" class="cws-nav-link">Projects</a>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20">
+                            <li><a href="vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
+                            <li><a href="bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="../contact.html" class="cws-nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
         <section class="project-hero">
-            <h1 class="text-4xl font-bold text-orange-400 mb-8 font-heading">Vinelife Church Wilmslow</h1>
+            <h1 class="text-4xl font-bold text-purple-800 mb-8 nunito-header">Vinelife Church Wilmslow</h1>
             <p class="project-short-desc">
                 Website redesign for a local church focused on improving structure, navigation and mobile usability.
             </p>
@@ -35,33 +43,32 @@
                 <li><strong>Role:</strong> Web Design &amp; Development</li>
                 <li><strong>Year:</strong> 2026</li>
                 <li><strong>Technologies:</strong> HTML, Tailwind CSS, JavaScript, Google Calendar API</li>
+                <img src="../images/vinelifescreenshot.png" alt="Vinelife homepage" class="inline-block"
+                    style="max-width:100%;height:auto;border-radius:8px;">
             </ul>
-
         </section>
 
-        <img src="../images/vinelifescreenshot.png" alt="Vinelife homepage"
-            class="project-main-img block mt-2 rounded-lg mt-4 mb-8"
-            style="max-width:100%;height:auto;border-radius:8px;">
-        <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-montserrat text-center mb-6">Project Links</h2>
-
+        <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header text-center mb-6">Project Links</h2>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="https://topg85.github.io/vinelifewilmslow/index.html" target="_blank" rel="noopener"
-                class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                class="inline-block bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
                 <span class="inline-flex items-center gap-2">
                     <i class="fa-solid fa-up-right-from-square"></i>
                     <span>Live Site</span>
                 </span>
             </a>
             <a href="https://github.com/TopG85/vinelifewilmslow" target="_blank" rel="noopener"
-                class="inline-block bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                class="inline-block bg-purple-100 hover:bg-purple-200 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
                 <span class="inline-flex items-center gap-2">
                     <i class="fa-brands fa-github"></i>
                     <span>GitHub Repo</span>
                 </span>
             </a>
         </div>
+
+        <!-- Planning & Wireframes section omitted for Vinelife (add if you have assets) -->
         <section class="project-overview">
-            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-heading mb-6">Project Overview</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">Project Overview</h2>
             <p>
                 Vinelife Church Wilmslow is a welcoming evangelical church based in Wilmslow, Cheshire. The aim of
                 the redesign was to create a modern website that clearly communicates the church’s activities and
@@ -76,7 +83,7 @@
         </section>
 
         <section class="project-problem">
-            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-heading mb-6">The Problem</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Problem</h2>
             <ul>
                 <li>Difficult navigation <img src="../images/difficultnavigation.png" alt="Difficult Navigation"
                         class="block mt-2" style="max-width:100%;height:auto;border-radius:8px;"></li>
@@ -89,7 +96,7 @@
         </section>
 
         <section class="project-solution">
-            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-heading mb-6">The Solution</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Solution</h2>
             <ul>
                 <li>Creating a clear navigation structure <img src="../images/navigationbar.png"
                         alt="Navigation Structure" class="block mt-2"
@@ -104,7 +111,7 @@
         </section>
 
         <section class="project-features">
-            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-montserrat mb-6">Key Features</h2>
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Key Features</h2>
             <ul>
                 <li><strong>Responsive Design:</strong> The site adapts smoothly across desktop, tablet and mobile
                     screens.</li>
@@ -121,7 +128,7 @@
         </section>
 
         <section class="project-screenshots">
-            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-montserrat mb-6">Screenshots / Visuals</h2>
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Screenshots / Visuals</h2>
             <ul>
                 <li style="list-style:none;padding:0;margin:0;">
                     <a href="#" class="enlarge-img-link" style="display:inline-block;max-width:100%;">
@@ -162,7 +169,7 @@
         </section>
 
         <section class="project-technologies">
-            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-montserrat mb-6">Technologies Used</h2>
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Technologies Used</h2>
             <ul>
                 <li>HTML</li>
                 <li>Tailwind CSS</li>
@@ -173,7 +180,7 @@
         </section>
 
         <section class="project-outcome">
-            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 font-montserrat mb-6">Outcome</h2>
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Outcome</h2>
             <p>
                 The redesigned website provides a clear and welcoming digital presence for the church. Visitors can
                 easily find service times, upcoming events and information about the church community.

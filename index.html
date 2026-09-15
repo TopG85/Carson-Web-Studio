@@ -6,32 +6,41 @@
 <title>Carson Web Studio</title>
 
 <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
-<body class="min-h-screen flex flex-col bg-gradient-to-b from-blue-900 to-purple-900 font-sans text-white text-base">
+<body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
 <header>
-    <nav class="bg-gradient-to-b from-blue-900 to-purple-900 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <h1 class="text-2xl font-bold tracking-tight font-heading">Carson Web Studio</h1>
+    <nav class="bg-white text-blue-900 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 flex items-center justify-between" style="padding-top:2.5rem;padding-bottom:2.5rem;">
+            <h1 class="text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
             <ul class="flex space-x-6 font-barlow text-lg">
-                <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
-                <li><a href="projects.html" class="hover:text-orange-400 transition">Projects</a></li>
-                <li><a href="about.html" class="hover:text-orange-400 transition">About</a></li>
-                <li><a href="contact.html" class="hover:text-orange-400 transition">Contact</a></li>
+                                <li><a href="index.html" class="cws-nav-link">Home</a></li>
+                                <li class="relative group">
+                                    <a href="projects.html" class="cws-nav-link">Projects</a>
+                                    <ul class="absolute left-0 mt-2 w-56 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20">
+                                        <li><a href="projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
+                                        <li><a href="projects/bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html" class="cws-nav-link">About</a></li>
+                                <li><a href="contact.html" class="cws-nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
-<section class="relative min-h-screen flex flex-col justify-center items-center py-16 bg-no-repeat bg-center" style="background-image: url('images/homepage.png'); background-size: 100vw 100vh;">
-    <div class="absolute inset-0 bg-blue-900 bg-opacity-70"></div>
-    <div class="w-full max-w-2xl mx-auto text-center relative z-10">
-        <h1 class="text-lg text-white mb-2 font-barlow">Hi, I'm <span class="font-bold text-orange-400">Daniel Carson</span></h1>
-        <h2 class="text-4xl font-bold text-white mb-4 font-heading">Web Designer & Developer</h2>
-        <p class="text-xl text-purple-200 mb-8">I design and build modern websites for churches, charities and organisations.</p>
-        <a href="projects.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg btn-pulse">View Projects</a>
-    </div>
-</section>
+<main class="flex-1 w-full px-4 py-10">
+    <section class="homepage-hero text-center">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="text-2xl sm:text-3xl mb-2 text-blue-900 nunito-header">Hi, I'm <span class="font-bold text-purple-800">Daniel Carson</span></h1>
+            <h2 class="text-5xl sm:text-6xl font-bold mb-4 text-purple-800 nunito-header">Web designer &amp; developer</h2>
+            <p class="text-2xl mb-8 text-blue-900 font-bold">I design and build modern websites for churches, charities and organisations.</p>
+            <a href="projects.html" class="cws-btn btn-pulse">View Projects</a>
+        </div>
+    </section>
+</main>
