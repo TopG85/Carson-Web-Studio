@@ -111,6 +111,32 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 3rem 2rem;
 }
+/* Remove underline from project card links */
+.recent-work-card {
+  text-decoration: none;
+}
+
+/* Scale down and contain the screenshot inside its box */
+.recent-work-thumb {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.recent-work-card:hover .recent-work-thumb img {
+  transform: scale(1.05);
+}
 /* Force white background for project hero sections */
 .project-hero {
   background: #fff !important;
@@ -456,7 +482,7 @@ h6 {
 /* Global link color override for blue/purple scheme */
 a {
   color: var(--cws-blue) !important;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.15s;
 }
 a:hover {
