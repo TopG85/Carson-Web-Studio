@@ -34,13 +34,37 @@
 </header>
 
 <main class="flex-1 w-full px-4 py-10">
-    <section class="homepage-hero text-center">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="text-2xl sm:text-3xl mb-2 text-blue-900 nunito-header">Hi, I'm <span class="font-bold text-purple-800">Daniel Carson</span></h1>
-            <h2 class="text-5xl sm:text-6xl font-bold mb-4 text-purple-800 nunito-header">Web designer &amp; developer</h2>
-            <p class="text-2xl mb-8 text-blue-900 font-bold">I design and build modern websites for churches, charities and organisations.</p>
-            <a href="projects.html" class="cws-btn btn-pulse">View Projects</a>
+        <section class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-12 text-purple-800 nunito-header">Recent Work</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+            <a href="projects/vinelife.html" class="group block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
+                <div class="aspect-video overflow-hidden">
+                    <img src="images/vinelife-thumb.jpg" alt="Vinelife Church Wilmslow website" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6 text-left">
+                    <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">Vinelife Church Wilmslow</h3>
+                    <p class="text-base text-blue-900 mb-4">A live client website with a custom Wagtail CMS, giving the church full content control after handover.</p>
+                    <span class="text-purple-800 font-semibold group-hover:underline">View project &rarr;</span>
+                </div>
+            </a>
+
+            <a href="projects/bitesizechurch.html" class="group block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
+                <div class="aspect-video overflow-hidden">
+                    <img src="images/bitesizechurch-thumb.jpg" alt="Bitesize Church website prototype" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6 text-left">
+                    <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">Bitesize Church</h3>
+                    <p class="text-base text-blue-900 mb-4">A website prototype and CMS build, mapped out with Relume before development to match the church's real communication needs.</p>
+                    <span class="text-purple-800 font-semibold group-hover:underline">View project &rarr;</span>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="projects.html" class="cws-btn">View All Projects</a>
         </div>
     </section>
 </main>
