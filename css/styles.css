@@ -2,7 +2,7 @@
    Carson Web Studio — Global Styles (cleaned & deduplicated)
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Exo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
 
 :root {
   --cws-blue: #1e3a8a;
@@ -49,7 +49,7 @@
 html {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
-  font-family: Exo, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 hr {
@@ -180,31 +180,33 @@ textarea::placeholder {
 body {
   background: #fff;
   color: var(--cws-blue);
-  font-family: "Exo", "Montserrat", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
   font-size: 1.08rem;
   line-height: 1.7;
   min-height: 100vh;
   margin: 0;
 }
 
-/* Default heading style: chunky Oswald look, site-wide */
+/* Default heading style: bold, modern Poppins — site-wide */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-transform: none;
   font-variant: normal;
-  letter-spacing: 1.2px;
-  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-weight: 700;
   color: var(--cws-purple);
   margin-bottom: 0.7em;
-  text-shadow: 1px 1px 0 #222, 2px 2px 0 rgba(255,255,255,0.13), 0 2px 2px rgba(0,0,0,0.06);
+  text-shadow: none;
 }
 
-/* Opt-in Nunito heading style — used via class="nunito-header" throughout the site.
-   Class specificity beats the element selector above, so this overrides it cleanly. */
+/* Used via class="nunito-header" throughout the site — same Poppins treatment,
+   kept as its own class since it's already applied across every page's headings. */
 .nunito-header {
-  font-family: "Nunito", "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 800;
   text-shadow: none;
-  letter-spacing: normal;
+  letter-spacing: -0.01em;
 }
 
 /* Global link styling */
@@ -545,6 +547,20 @@ header, nav {
 .rounded { border-radius: 0.25rem; }
 .rounded-full { border-radius: 9999px; }
 .rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+
+.overflow-hidden { overflow: hidden; }
+
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.gap-8 { gap: 2rem; }
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 
 .border-4 { border-width: 4px; }
 .border-purple-900 { border-color: #581c87; }
@@ -580,7 +596,14 @@ header, nav {
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 
-.font-heading, .font-sans { font-family: Bungee, sans-serif; }
+.font-heading { font-family: "Poppins", Arial, sans-serif; }
+.font-sans { font-family: "Inter", Arial, sans-serif; }
+.font-barlow { font-family: "Inter", Arial, sans-serif; }
+.font-extrabold { font-weight: 800; }
+
+.bg-white { background-color: #fff; }
+.text-blue-900 { color: var(--cws-blue); }
+.text-purple-800 { color: var(--cws-purple); }
 
 .text-base { font-size: 1rem; line-height: 1.5rem; }
 .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
@@ -605,6 +628,12 @@ header, nav {
 .shadow-lg {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
 }
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+.hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
 
 .transition {
   transition-duration: 0.15s;
@@ -619,4 +648,4 @@ header, nav {
 
 @media (min-width: 640px) {
   .sm\:flex-row { flex-direction: row; }
-} 
+}
