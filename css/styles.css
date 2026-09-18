@@ -511,6 +511,7 @@ header, nav {
 .mt-2 { margin-top: 0.5rem; }
 .mt-6 { margin-top: 1.5rem; }
 .mt-10 { margin-top: 2.5rem; }
+.mt-12 { margin-bottom: 3rem; }
 
 .block { display: block; }
 .inline-block { display: inline-block; }
