@@ -1,72 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- DEBUG: If you see this comment, you are viewing the correct file. -->
-<style>
-/* No .btn-pulse animation here; now in css/styles.css for guaranteed override */
-</style>
-            <style>
-                .project-btn-wide {
-                    width: 300px;
-                    max-width: 100%;
-                    display: inline-block;
-                    text-align: center;
-                }
-            </style>
+    <!-- DEBUG: If you see this comment, you are viewing the correct file. -->
+    <style>
+        /* No .btn-pulse animation here; now in css/styles.css for guaranteed override */
+    </style>
+    <style>
+        .project-btn-wide {
+            width: 300px;
+            max-width: 100%;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Carson Web Studio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
-        <header>
-    <nav class="bg-white text-blue-900 shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 flex items-center justify-between" style="padding-top:2.5rem;padding-bottom:2.5rem;">
-            <h1 class="text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
-            <ul class="flex space-x-6 font-barlow text-lg">
-                <li><a href="index.html" class="cws-nav-link">Home</a></li>
-                <li class="relative group">
-                    <a href="projects.html" class="cws-nav-link">Projects</a>
-                    <ul class="absolute left-0 mt-2 w-56 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20">
-                        <li><a href="projects/carbcounter.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Wholesome</a></li>
-                        <li><a href="projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
-                        <li><a href="projects/bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html" class="cws-nav-link">About</a></li>
-                <li><a href="contact.html" class="cws-nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-        </header>
-        <section class="relative min-h-screen flex flex-col justify-center items-center py-16">
-            <div class="w-full max-w-2xl mx-auto text-center mb-12">
-                <div style="text-align:center;">
-                    <h1 class="font-extrabold text-purple-800 mb-6 nunito-header" style="font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-1px;line-height:1.08;">Projects</h1>
-                    <p class="mb-12 text-blue-900" style="font-size:1.25rem;">A selection of my recent web projects. Click to learn more about each one.</p>
-                </div>
-                <div class="mb-12">
-                    <h2 class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:3rem;">Carb Counter</h2>
-                    <p class="mb-4 text-blue-900">A simple, user-friendly application for tracking carbohydrate intake and managing dietary goals.</p>
-                    <a href="projects/carbcounter.html" class="cws-btn project-btn-wide">View All Projects</a>
+    <header>
+        <nav class="bg-white text-blue-900 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
+                style="padding-top:2.5rem;padding-bottom:2.5rem;">
+                <h1 class="text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
+                <ul class="flex space-x-6 font-barlow text-lg">
+                    <li><a href="index.html" class="cws-nav-link">Home</a></li>
+                    <li class="relative group">
+                        <a href="projects.html" class="cws-nav-link">Projects</a>
+                        <ul
+                            class="absolute left-0 mt-2 w-56 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20">
+                            <li><a href="projects/carbcounter.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Wholesome</a></li>
+                            <li><a href="projects/vinelife.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a>
+                            </li>
+                            <li><a href="projects/bitesizechurch.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="contact.html" class="cws-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="relative min-h-screen flex flex-col justify-center items-center py-16">
+        <div class="w-full max-w-2xl mx-auto text-center mb-12">
+            <div style="text-align:center;">
+                <h1 class="font-extrabold text-purple-800 mb-6 nunito-header"
+                    style="font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-1px;line-height:1.08;">Projects</h1>
+                <p class="mb-12 text-blue-900" style="font-size:1.25rem;">A selection of my recent web projects. Click
+                    to learn more about each one.</p>
+            </div>
+            <div class="flex flex-col items-center gap-10">
+                <h2 class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:3rem;">
+                    Carb Counter</h2>
+                <p class="mb-4 text-blue-900">A simple, user-friendly application for tracking carbohydrate intake and
+                    managing dietary goals.</p>
+                <a href="projects/carbcounter.html" class="cws-btn project-btn-wide">View All Projects</a>
+            </div>
+            <div class="flex flex-col items-center gap-10">
+                <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:3rem;">
+                    <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Vinelife Church Wilmslow</h2>
+                    <p class="mb-4 text-blue-900">A modern, responsive site for a local church, featuring event
+                        management and community resources.</p>
+                    <a href="projects/vinelife.html" class="cws-btn project-btn-wide">View Project</a>
                 </div>
                 <div class="flex flex-col items-center gap-10">
-                    <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:3rem;">
-                        <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Vinelife Church Wilmslow</h2>
-                        <p class="mb-4 text-blue-900">A modern, responsive site for a local church, featuring event management and community resources.</p>
-                        <a href="projects/vinelife.html" class="cws-btn project-btn-wide">View Project</a>
-                    </div>
                     <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
                         <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Bitesize Church</h2>
-                        <p class="mb-4 text-blue-900">A simple, accessible site for a digital faith community, optimized for mobile and easy updates.</p>
+                        <p class="mb-4 text-blue-900">A simple, accessible site for a digital faith community, optimized
+                            for mobile and easy updates.</p>
                         <a href="projects/bitesizechurch.html" class="cws-btn project-btn-wide">View Project</a>
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
 </body>
+
 </html>
