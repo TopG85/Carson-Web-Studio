@@ -51,6 +51,8 @@ html {
   -webkit-text-size-adjust: 100%;
   font-family: "Inter", Arial, sans-serif;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  width: 100%;
 }
 hr {
   border-top-width: 1px;
@@ -186,6 +188,8 @@ body {
   line-height: 1.7;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Default heading style: bold, modern Poppins — site-wide */
@@ -368,6 +372,8 @@ header, nav {
   border-radius: 1.5rem;
   position: relative;
   width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   min-height: 100vh;
   background: url('../images/homepage.png') center center/cover no-repeat;
   display: flex;
@@ -408,6 +414,8 @@ header, nav {
 .hero-image {
   position: relative;
   width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   min-height: 100vh;
   background: url('../images/vinelifescreenshot.png') center center/cover no-repeat;
   display: flex;
@@ -723,10 +731,81 @@ header, nav {
 }
 
 /* --------------------------------------------------------------------------
-   Responsive breakpoints — mobile & tablet adjustments
+   Responsive system
+   Covers everything from folded fold-phones (~240px) through laptop-width
+   tablets (~1366px) using fluid sizing (clamp) plus a small set of range
+   breakpoints, rather than one rule per exact device. Fluid values mean
+   widths *between* listed devices are covered too, not just exact matches.
    -------------------------------------------------------------------------- */
 
-/* Tablet and below: tighten side padding on wide containers */
+/* Global safety net: nothing is ever allowed to force horizontal scroll */
+img, video, iframe, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Fluid heading sizes: scale smoothly with viewport width instead of
+   jumping at fixed breakpoints. clamp(min, preferred, max) means these
+   never go below the min or above the max, whatever the screen width. --- */
+header nav h1.text-7xl {
+  font-size: clamp(1.5rem, 5vw, 4.5rem);
+}
+.homepage-hero h1 {
+  font-size: clamp(1.1rem, 4vw, 2.5rem);
+}
+.homepage-hero h2 {
+  font-size: clamp(1.25rem, 6vw, 3.5rem);
+  line-height: 1.15;
+}
+.homepage-hero p,
+.hero-content p {
+  font-size: clamp(0.95rem, 2.5vw, 1.5rem);
+}
+.project-hero h1 {
+  font-size: clamp(1.25rem, 4vw, 2.25rem);
+}
+
+/* --- Hero section height: full-screen on desktop, shorter on small
+   screens so content isn't forced into a tall, mostly-empty box --- */
+@media (max-width: 768px) {
+  .homepage-hero,
+  .hero-image {
+    min-height: 70vh;
+  }
+}
+
+/* --- Narrow phones and folded fold-phones (down to ~240px) --- */
+@media (max-width: 360px) {
+  .homepage-hero,
+  .hero-image {
+    min-height: 60vh;
+  }
+  .hero-content,
+  .homepage-hero .hero-content {
+    padding: 1.5rem 1rem;
+  }
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+}
+
+/* --- Phones and small tablets (portrait): reduce large desktop padding --- */
+@media (max-width: 768px) {
+  .py-16 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .py-10 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+  .recent-work-card,
+  main .max-w-md {
+    max-width: 100%;
+  }
+
+  .flex.flex-col.sm\:flex-row {
+    width: 100%;
+  }
+}
+
+/* --- Tablets and small laptops: tighten side padding on wide containers,
+   but content still has more room than on phones --- */
 @media (max-width: 1024px) {
   .max-w-6xl {
     padding-left: 1rem;
@@ -734,59 +813,10 @@ header, nav {
   }
 }
 
-/* Mobile: hero and section spacing (nav is handled by the hamburger menu block above) */
-@media (max-width: 768px) {
-  header nav h1.text-7xl {
-    font-size: 2.25rem;
-  }
-
-  /* --- Homepage / project hero sections --- */
-  .homepage-hero,
-  .hero-image {
-    min-height: 70vh;
-  }
-  .homepage-hero h1 {
-    font-size: 1.75rem;
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-  }
+/* --- Large tablets / laptop-width devices (iPad Pro, Surface Pro): mostly
+   desktop layout already fits, just cap hero text from getting oversized --- */
+@media (min-width: 1025px) and (max-width: 1366px) {
   .homepage-hero h2 {
-    font-size: 2.25rem;
-  }
-  .homepage-hero p,
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-  .project-hero h1 {
-    font-size: 1.75rem;
-  }
-
-  /* --- Section spacing: reduce large desktop padding --- */
-  .py-16 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-  .py-10 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-
-  /* --- Recent Work / project cards: full-width, less side padding --- */
-  .recent-work-card,
-  main .max-w-md {
-    max-width: 100%;
-  }
-}
-
-/* Small phones: tighten further */
-@media (max-width: 480px) {
-  header nav h1.text-7xl {
-    font-size: 1.75rem;
-  }
-  .homepage-hero h2 {
-    font-size: 1.75rem;
-  }
-  .homepage-hero p {
-    font-size: 1rem;
-  }
-  h1, h2, h3 {
-    word-break: break-word;
-  }
-  .flex.flex-col.sm\:flex-row {
-    width: 100%;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
   }
 }
