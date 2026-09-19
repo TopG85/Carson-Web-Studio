@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap"
         rel="stylesheet">
-
+    
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
@@ -22,25 +22,28 @@
                 style="padding-top:1.5rem;padding-bottom:1.5rem;">
                 <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
 
-                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-                <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
-                </label>
+                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
 
                 <ul class="nav-links flex space-x-6 font-barlow text-lg">
                     <li><a href="index.html" class="cws-nav-link">Home</a></li>
-                    <li class="relative group">
-                        <a href="projects.html" class="cws-nav-link">Projects</a>
-                        <ul
-                            class="absolute left-0 mt-2 w-56 bg-white rounded shadow-lg opacity-0">
+                    <li class="relative nav-dropdown">
+                        <div class="flex items-center gap-1">
+                            <a href="projects.html" class="cws-nav-link">Projects</a>
+                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
+                                aria-expanded="false">▾</button>
+                        </div>
+                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
                             <li><a href="projects/carbcounter.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Carb
-                                    Counter App</a></li>
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Carb Counter App</a>
+                            </li>
                             <li><a href="projects/vinelife.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife
-                                    Church</a></li>
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a>
+                            </li>
                             <li><a href="projects/bitesizechurch.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize
-                                    Church</a></li>
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="about.html" class="cws-nav-link">About</a></li>

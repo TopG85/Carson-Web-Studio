@@ -297,24 +297,33 @@ header, nav {
   background: rgba(249,115,22,0.08);
 }
 
-.group > ul {
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  color: var(--cws-blue);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.nav-dropdown-menu {
   display: none;
   position: absolute;
   left: 0;
-  top: calc(100% + 8px);
+  top: 100%;
   min-width: 180px;
   background: #fff;
   border: 1.5px solid var(--cws-blue-dark);
   border-radius: 1rem;
   box-shadow: 0 6px 32px 0 rgba(30,41,59,0.08);
-  padding: 0.5rem 0;
+  padding: 0.75rem 0 0.5rem;
+  margin-top: 0.5rem;
   z-index: 20;
 }
-.group:hover > ul,
-.group:focus-within > ul {
+.nav-dropdown-menu.nav-dropdown-open {
   display: block;
 }
-.group > ul a {
+.nav-dropdown-menu a {
   color: var(--cws-blue);
   padding: 0.7rem 1.5rem;
   border-radius: 0.7rem;
@@ -322,19 +331,9 @@ header, nav {
   font-weight: 500;
   transition: background 0.15s, color 0.15s;
 }
-.group > ul a:hover {
+.nav-dropdown-menu a:hover {
   background: var(--cws-orange);
   color: #fff;
-}
-
-/* Utility-class based dropdown variant (used on some pages via raw Tailwind-style classes) */
-.group:hover .group-hover\:opacity-100,
-.group:focus-within .group-hover\:opacity-100 {
-  opacity: 1;
-}
-.group:hover .group-hover\:pointer-events-auto,
-.group:focus-within .group-hover\:pointer-events-auto {
-  pointer-events: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -659,18 +658,20 @@ header, nav {
 }
 
 /* --------------------------------------------------------------------------
-   Mobile hamburger menu
+   Mobile hamburger menu (JS-controlled via nav.js, toggling .nav-open /
+   .nav-burger-open classes — no checkbox hack, works identically with
+   click or tap)
    -------------------------------------------------------------------------- */
-.nav-toggle-checkbox {
-  display: none;
-}
 .nav-burger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
   height: 20px;
+  background: none;
+  border: none;
   cursor: pointer;
+  padding: 0;
   z-index: 30;
 }
 .nav-burger span {
@@ -681,13 +682,13 @@ header, nav {
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
-.nav-toggle-checkbox:checked ~ .nav-burger span:nth-child(1) {
+.nav-burger.nav-burger-open span:nth-child(1) {
   transform: translateY(8.5px) rotate(45deg);
 }
-.nav-toggle-checkbox:checked ~ .nav-burger span:nth-child(2) {
+.nav-burger.nav-burger-open span:nth-child(2) {
   opacity: 0;
 }
-.nav-toggle-checkbox:checked ~ .nav-burger span:nth-child(3) {
+.nav-burger.nav-burger-open span:nth-child(3) {
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
@@ -708,16 +709,15 @@ header, nav {
     padding: 1rem 1.5rem 1.5rem;
     gap: 0.25rem;
   }
-  .nav-toggle-checkbox:checked ~ .nav-links {
+  .nav-links.nav-open {
     display: flex;
   }
   .nav-links .space-x-6 > :not([hidden]) ~ :not([hidden]),
   .nav-links.space-x-6 > :not([hidden]) ~ :not([hidden]) {
     margin-left: 0;
   }
-  /* On mobile, the Projects dropdown becomes a normal stacked block, not a hover popup */
-  .nav-links .group > ul {
-    display: block;
+  /* On mobile, the Projects dropdown becomes a normal stacked block once opened */
+  .nav-links .nav-dropdown-menu {
     position: static;
     box-shadow: none;
     border: none;
