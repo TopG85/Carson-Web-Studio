@@ -508,11 +508,9 @@ header, nav {
 .mb-4 { margin-bottom: 1rem; }
 .mb-8 { margin-bottom: 2rem; }
 .mb-10 { margin-bottom: 2.5rem; }
-.mb-16 { margin-bottom: 4rem; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-6 { margin-top: 1.5rem; }
 .mt-10 { margin-top: 2.5rem; }
-.mt-12 { margin-bottom: 3rem; }
 
 .block { display: block; }
 .inline-block { display: inline-block; }
@@ -652,9 +650,81 @@ header, nav {
   .sm\:flex-row { flex-direction: row; }
 }
 
-/* ==========================================================================
+/* --------------------------------------------------------------------------
+   Mobile hamburger menu
+   -------------------------------------------------------------------------- */
+.nav-toggle-checkbox {
+  display: none;
+}
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 30;
+}
+.nav-burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--cws-purple);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle-checkbox:checked ~ .nav-burger span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.nav-toggle-checkbox:checked ~ .nav-burger span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle-checkbox:checked ~ .nav-burger span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .nav-burger {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 12px 24px rgba(30,41,59,0.12);
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 0.25rem;
+  }
+  .nav-toggle-checkbox:checked ~ .nav-links {
+    display: flex;
+  }
+  .nav-links .space-x-6 > :not([hidden]) ~ :not([hidden]),
+  .nav-links.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0;
+  }
+  /* On mobile, the Projects dropdown becomes a normal stacked block, not a hover popup */
+  .nav-links .group > ul {
+    display: block;
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+  }
+  header nav .max-w-6xl {
+    position: relative;
+    flex-wrap: wrap;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Responsive breakpoints — mobile & tablet adjustments
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 
 /* Tablet and below: tighten side padding on wide containers */
 @media (max-width: 1024px) {
@@ -664,31 +734,10 @@ header, nav {
   }
 }
 
-/* Mobile: nav, hero, and section spacing */
+/* Mobile: hero and section spacing (nav is handled by the hamburger menu block above) */
 @media (max-width: 768px) {
-  /* --- Nav --- */
-  header nav > .max-w-6xl {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
   header nav h1.text-7xl {
     font-size: 2.25rem;
-  }
-  header nav ul.flex {
-    flex-wrap: wrap;
-    row-gap: 0.5rem;
-    column-gap: 1.25rem;
-  }
-  header nav .space-x-6 > :not([hidden]) ~ :not([hidden]) {
-    margin-left: 0;
-  }
-  /* Dropdown: anchor under its own link instead of the far edge of a now-narrow nav */
-  .group > ul {
-    left: 0;
-    right: auto;
   }
 
   /* --- Homepage / project hero sections --- */
