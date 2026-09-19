@@ -651,3 +651,93 @@ header, nav {
 @media (min-width: 640px) {
   .sm\:flex-row { flex-direction: row; }
 }
+
+/* ==========================================================================
+   Responsive breakpoints — mobile & tablet adjustments
+   ========================================================================== */
+
+/* Tablet and below: tighten side padding on wide containers */
+@media (max-width: 1024px) {
+  .max-w-6xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Mobile: nav, hero, and section spacing */
+@media (max-width: 768px) {
+  /* --- Nav --- */
+  header nav > .max-w-6xl {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  header nav h1.text-7xl {
+    font-size: 2.25rem;
+  }
+  header nav ul.flex {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 1.25rem;
+  }
+  header nav .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0;
+  }
+  /* Dropdown: anchor under its own link instead of the far edge of a now-narrow nav */
+  .group > ul {
+    left: 0;
+    right: auto;
+  }
+
+  /* --- Homepage / project hero sections --- */
+  .homepage-hero,
+  .hero-image {
+    min-height: 70vh;
+  }
+  .homepage-hero h1 {
+    font-size: 1.75rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .homepage-hero h2 {
+    font-size: 2.25rem;
+  }
+  .homepage-hero p,
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .project-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  /* --- Section spacing: reduce large desktop padding --- */
+  .py-16 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .py-10 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+  /* --- Recent Work / project cards: full-width, less side padding --- */
+  .recent-work-card,
+  main .max-w-md {
+    max-width: 100%;
+  }
+}
+
+/* Small phones: tighten further */
+@media (max-width: 480px) {
+  header nav h1.text-7xl {
+    font-size: 1.75rem;
+  }
+  .homepage-hero h2 {
+    font-size: 1.75rem;
+  }
+  .homepage-hero p {
+    font-size: 1rem;
+  }
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+  .flex.flex-col.sm\:flex-row {
+    width: 100%;
+  }
+}
