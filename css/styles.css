@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Carson Web Studio — Global Styles (cleaned & deduplicated)
+   Carson Web Studio â€” Global Styles (cleaned & deduplicated)
    ========================================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
@@ -192,7 +192,7 @@ body {
   width: 100%;
 }
 
-/* Default heading style: bold, modern Poppins — site-wide */
+/* Default heading style: bold, modern Poppins â€” site-wide */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-transform: none;
@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: none;
 }
 
-/* Used via class="nunito-header" throughout the site — same Poppins treatment,
+/* Used via class="nunito-header" throughout the site â€” same Poppins treatment,
    kept as its own class since it's already applied across every page's headings. */
 .nunito-header {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -302,8 +302,21 @@ header, nav {
   border: none;
   color: var(--cws-blue);
   font-size: 0.9rem;
+  line-height: 1;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Keep every nav item (plain links and the wrapped Projects item alike)
+   vertically centered on the same baseline */
+.nav-links {
+  align-items: center;
+}
+.nav-links > li {
+  display: flex;
+  align-items: center;
 }
 
 .nav-dropdown-menu {
@@ -322,6 +335,14 @@ header, nav {
 }
 .nav-dropdown-menu.nav-dropdown-open {
   display: block;
+}
+
+/* On devices with a real mouse, restore the familiar hover-to-open feel.
+   Touch devices (no hover) keep the click-only behavior from nav.js. */
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+  }
 }
 .nav-dropdown-menu a {
   color: var(--cws-blue);
@@ -659,7 +680,7 @@ header, nav {
 
 /* --------------------------------------------------------------------------
    Mobile hamburger menu (JS-controlled via nav.js, toggling .nav-open /
-   .nav-burger-open classes — no checkbox hack, works identically with
+   .nav-burger-open classes â€” no checkbox hack, works identically with
    click or tap)
    -------------------------------------------------------------------------- */
 .nav-burger {
@@ -708,6 +729,7 @@ header, nav {
     box-shadow: 0 12px 24px rgba(30,41,59,0.12);
     padding: 1rem 1.5rem 1.5rem;
     gap: 0.25rem;
+    z-index: 50;
   }
   .nav-links.nav-open {
     display: flex;
