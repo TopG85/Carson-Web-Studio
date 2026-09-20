@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review | Carson Web Studio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
+    <header>
+        <nav class="bg-white text-blue-900 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
+                style="padding-top:1.5rem;padding-bottom:1.5rem;">
+                <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
+
+                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-links flex space-x-6 font-barlow text-lg">
+                    <li><a href="index.html" class="cws-nav-link">Home</a></li>
+                    <li class="relative nav-dropdown">
+                        <div class="flex items-center gap-1">
+                            <a href="projects.html" class="cws-nav-link">Projects</a>
+                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu" aria-expanded="false">▾</button>
+                        </div>
+                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
+                            <li><a href="projects/carbcounter.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Carb Counter App</a></li>
+                            <li><a href="projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
+                            <li><a href="projects/bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="contact.html" class="cws-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1 w-full px-4 py-10">
+        <section class="max-w-2xl mx-auto text-center py-10">
+            <h1 class="text-4xl font-bold nunito-header text-purple-800 mb-4">Leave a Review</h1>
+            <p class="text-lg mb-10">
+                Worked with me on a project? I'd love to hear how it went. Reviews are checked before
+                they're added to the site, so it may take a day or two to appear.
+            </p>
+
+            <form action="https://formspree.io/f/YOUR_REVIEW_FORM_ID" method="POST"
+                class="flex flex-col space-y-6 text-left">
+
+                <div>
+                    <label for="rating" class="block text-sm font-semibold mb-2">Your rating</label>
+                    <div class="star-picker">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5" title="5 stars">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 stars">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 stars">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 stars">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 star">★</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="name" class="block text-sm font-semibold mb-1">Your name</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full rounded-lg border border-gray-300 px-4 py-2">
+                </div>
+
+                <div>
+                    <label for="project" class="block text-sm font-semibold mb-1">Which project was this for?</label>
+                    <input type="text" id="project" name="project" placeholder="e.g. Vinelife Church Wilmslow"
+                        class="w-full rounded-lg border border-gray-300 px-4 py-2">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-semibold mb-1">Your email (not published)</label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full rounded-lg border border-gray-300 px-4 py-2">
+                </div>
+
+                <div>
+                    <label for="comment" class="block text-sm font-semibold mb-1">Your review</label>
+                    <textarea id="comment" name="comment" rows="5" required
+                        class="w-full rounded-lg border border-gray-300 px-4 py-2"></textarea>
+                </div>
+
+                <button type="submit" class="cws-btn">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/nav.js"></script>
+</body>
+
+</html>
