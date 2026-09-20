@@ -470,6 +470,18 @@ header, nav {
    -------------------------------------------------------------------------- */
 .recent-work-card {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.recent-work-card .p-6 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.recent-work-card .p-6 .cws-btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 .recent-work-thumb {
   width: 100%;

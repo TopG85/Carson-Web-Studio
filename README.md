@@ -4,63 +4,28 @@
 Carson Web Studio — Web Designer & Developer
 I design and build modern, responsive websites for churches, charities and organisations.
 
----
-
-
-
-## 🚀 Recent Updates (March 2026)
-
-- **Navigation:**
-	- Consistent navbar on all pages with dropdown Projects menu (hover/focus to open)
-	- Home, About, Contact links restored and styled
-- **Hero Section:**
-	- Animated SVG wave background and moving hero shapes
-	- Modern, bold intro and subtitle
-- **Typography & Layout:**
-	- Bungee font restored and loaded on all pages for headings/branding
-	- Montserrat and Barlow fonts for all text
-	- Responsive `.page-wrapper` for consistent padding and centering
-- **About & Projects:**
-	- About page with personal intro and portrait
-	- Project pages with before/after screenshots, clickable images, and clear feature lists
-	- Images open in modal/lightbox for detailed viewing
-	- Visual comparison of old vs. new design for Vinelife project
-- **Dropdown Menu:**
-	- Projects dropdown appears on hover/focus for all pages
-	- Always accessible and styled for clarity
-- **Contact Page:**
-	- Under construction message with animated 🚧 (flashing) and 👷‍♂️ (waving) emojis
-	- Email address provided
-- **General Polish:**
-	- All images have rounded corners and consistent sizing
-	- Footer centered on all pages
-	- Improved mobile responsiveness and accessibility
-- **File & Folder Cleanup:**
-	- Removed old backup and carson-web-studio folders for a clean project root
-	- All site files now in the root directory
-
-### March 2026 UI/UX Fixes
-- Improved spacing between headings and images for all project pages
-- Fixed image HTML: removed duplicate/malformed class/style attributes
-- Ensured all images use consistent border-radius (rounded corners)
-- Added vertical and horizontal spacing for better readability
-- Cleaned up HTML for valid, maintainable markup
+🔗 **Live site:** [topg85.github.io/Carson-Web-Studio](https://topg85.github.io/Carson-Web-Studio/)
 
 ---
 
-## Local Development
+## 🚀 Recent Updates (September 2026)
 
-To run the site locally:
-
-1. Open a terminal and navigate to the project folder:
-		```sh
-		cd carson-web-studio
-		```
-2. Start a local server:
-		```sh
-		python3 -m http.server 8000
-		```
-3. Open your browser and go to:
-		[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-
-This will serve the site from the correct folder and show your homepage.
+- **New Project — Carb Counter & Dose Calculator:**
+	- Added as a full case-study project page, plus a homepage "Recent Work" preview card
+	- Links to both the [live app](https://topg85.github.io/carb-counter-app/) and [GitHub repo](https://github.com/TopG85/carb-counter-app)
+- **Navigation — rebuilt from the ground up:**
+	- Replaced the old hover-only dropdown with a click-based Projects menu (works reliably on both desktop and touch)
+	- Added a working mobile hamburger menu, powered by a shared `js/nav.js` script
+	- Fixed a z-index stacking bug where the open mobile menu was rendering behind the hero image
+	- Fixed vertical alignment between "Projects" and the other nav links
+- **Homepage:**
+	- Added a "Recent Work" section with project preview cards (Carb Counter, Vinelife Church, Bitesize Church), each linking through to its full case study
+	- Fixed a full-bleed hero width bug (hero background was overflowing/misaligned on certain screen widths)
+- **Typography:**
+	- Replaced Oswald/Bungee with **Poppins** (headings) and **Inter** (body text) for a bolder, more modern, more readable look
+	- Fixed `.nunito-header` and several other utility classes that were referenced in HTML but never actually defined in the stylesheet
+- **Responsive design:**
+	- Added a fluid, range-based responsive system (using `clamp()` for text sizing) covering everything from folded phones (~240px) up to laptop-width tablets (~1366px)
+	- Fixed the Projects dropdown's hover "dead zone" that caused it to close before you could click a link
+- **Contact page:**
+	- Replaced the "under construction" placeholder with a working contact form (Formspree-powered),
