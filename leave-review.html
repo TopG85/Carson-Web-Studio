@@ -48,23 +48,19 @@
                 they're added to the site, so it may take a day or two to appear.
             </p>
 
-            <form action="https://formspree.io/f/mljdjgyq" method="POST"
+            <form action="https://formspree.io/f/YOUR_REVIEW_FORM_ID" method="POST"
                 class="flex flex-col space-y-6 text-left">
 
                 <div>
-                    <label for="rating" class="block text-sm font-semibold mb-2">Your rating</label>
-                    <div class="star-picker">
-                        <input type="radio" id="star5" name="rating" value="5" required>
-                        <label for="star5" title="5 stars">★</label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4" title="4 stars">★</label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3" title="3 stars">★</label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2" title="2 stars">★</label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1" title="1 star">★</label>
+                    <label class="block text-sm font-semibold mb-2">Your rating</label>
+                    <div class="star-picker" id="star-picker" role="radiogroup" aria-label="Star rating">
+                        <span class="star-picker-star" data-value="1">★</span>
+                        <span class="star-picker-star" data-value="2">★</span>
+                        <span class="star-picker-star" data-value="3">★</span>
+                        <span class="star-picker-star" data-value="4">★</span>
+                        <span class="star-picker-star" data-value="5">★</span>
                     </div>
+                    <input type="hidden" name="rating" id="rating-value" value="" required>
                 </div>
 
                 <div>
@@ -97,6 +93,43 @@
     </main>
 
     <script src="js/nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var stars = document.querySelectorAll('#star-picker .star-picker-star');
+            var ratingInput = document.getElementById('rating-value');
+            var form = ratingInput.closest('form');
+
+            stars.forEach(function (star) {
+                star.addEventListener('click', function () {
+                    var value = star.getAttribute('data-value');
+                    ratingInput.value = value;
+                    applyFill(value);
+                });
+                star.addEventListener('mouseenter', function () {
+                    applyFill(star.getAttribute('data-value'));
+                });
+            });
+
+            document.getElementById('star-picker').addEventListener('mouseleave', function () {
+                applyFill(ratingInput.value);
+            });
+
+            function applyFill(value) {
+                stars.forEach(function (s) {
+                    s.classList.toggle('selected', Number(s.getAttribute('data-value')) <= Number(value));
+                });
+            }
+
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    if (!ratingInput.value) {
+                        e.preventDefault();
+                        alert('Please choose a star rating before submitting.');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

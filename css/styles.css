@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Carson Web Studio â€” Global Styles (cleaned & deduplicated)
+   Carson Web Studio — Global Styles (cleaned & deduplicated)
    ========================================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
@@ -192,7 +192,7 @@ body {
   width: 100%;
 }
 
-/* Default heading style: bold, modern Poppins â€” site-wide */
+/* Default heading style: bold, modern Poppins — site-wide */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-transform: none;
@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: none;
 }
 
-/* Used via class="nunito-header" throughout the site â€” same Poppins treatment,
+/* Used via class="nunito-header" throughout the site — same Poppins treatment,
    kept as its own class since it's already applied across every page's headings. */
 .nunito-header {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -692,7 +692,7 @@ header, nav {
 
 /* --------------------------------------------------------------------------
    Mobile hamburger menu (JS-controlled via nav.js, toggling .nav-open /
-   .nav-burger-open classes â€” no checkbox hack, works identically with
+   .nav-burger-open classes — no checkbox hack, works identically with
    click or tap)
    -------------------------------------------------------------------------- */
 .nav-burger {
@@ -853,4 +853,62 @@ header nav h1.text-7xl {
   .homepage-hero h2 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
   }
+}
+
+/* ==========================================================================
+   Client reviews — display cards and star rating (read-only + input picker)
+   ========================================================================== */
+
+#reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(88,28,135,0.06);
+  padding: 1.5rem;
+}
+
+.review-stars {
+  color: #f5a623;
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.review-comment {
+  font-style: italic;
+  color: var(--cws-blue);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.review-meta {
+  font-size: 0.9rem;
+  color: var(--cws-purple);
+}
+
+/* --- Interactive star picker for the "Leave a Review" form ---
+   Filling is handled by JS adding a .selected class (see the inline
+   script in leave-review.html) — no CSS sibling-selector trickery. */
+.star-picker {
+  display: flex;
+  gap: 0.25rem;
+}
+.star-picker-star {
+  font-size: 2rem;
+  line-height: 1;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: color 0.15s;
+  user-select: none;
+}
+.star-picker-star.selected {
+  color: #f5a623;
 }
