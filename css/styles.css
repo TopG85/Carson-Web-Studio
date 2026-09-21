@@ -284,6 +284,15 @@ header, nav {
 /* --------------------------------------------------------------------------
    Nav dropdown ("Projects" menu)
    -------------------------------------------------------------------------- */
+/* Main content stays capped for readability, while the desktop navigation
+   uses the available viewport width to keep its links comfortably right. */
+header nav > .max-w-6xl {
+  width: 100%;
+  max-width: none;
+  padding-left: clamp(1.25rem, 4vw, 5rem);
+  padding-right: clamp(1.25rem, 4vw, 5rem);
+}
+
 .cws-nav-link {
   color: var(--cws-blue);
   font-weight: 700;
@@ -725,7 +734,7 @@ header, nav {
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1120px) {
   .nav-burger {
     display: flex;
   }

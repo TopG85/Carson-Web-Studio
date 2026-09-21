@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShutterSpace, a photography portfolio and community platform by Daniel Carson.">
+    <title>ShutterSpace | Carson Web Studio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
+    <script src="../js/nav.js" defer></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
+    <header>
+        <nav class="bg-white text-blue-900 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
+                style="padding-top:1.5rem;padding-bottom:1.5rem;">
+                <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
+
+                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-links flex space-x-6 font-barlow text-lg">
+                    <li><a href="../index.html" class="cws-nav-link">Home</a></li>
+                    <li class="relative nav-dropdown">
+                        <div class="flex items-center gap-1">
+                            <a href="../projects.html" class="cws-nav-link">Projects</a>
+                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
+                                aria-expanded="false">▾</button>
+                        </div>
+                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
+                            <li><a href="carbcounter.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Carb Counter App</a></li>
+                            <li><a href="vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
+                            <li><a href="bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
+                            <li><a href="shutterspace.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a></li>
+                            <li><a href="hackathon.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="../contact.html" class="cws-nav-link">Contact</a></li>
+                    <li><a href="../leave-review.html" class="cws-nav-link">Leave a Review</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
+        <section class="project-hero">
+            <h1 class="text-4xl font-bold text-purple-800 mb-8 nunito-header">ShutterSpace</h1>
+            <p class="project-short-desc">
+                A full-stack photography portfolio platform designed for photographers to showcase their work, build a
+                profile and connect through thoughtful community features.
+            </p>
+            <ul class="project-details">
+                <li><strong>Role:</strong> Full-Stack Developer — Design &amp; Development</li>
+                <li><strong>Technologies:</strong> Python, Django, PostgreSQL, Cloudinary, Heroku, HTML, CSS and JavaScript</li>
+            </ul>
+            <img src="../images/shutterspace.jpg" alt="ShutterSpace photography portfolio platform" class="mt-6"
+                style="width:100%;height:auto;border-radius:8px;">
+        </section>
+
+        <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-6 nunito-header text-center">Project Links</h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="https://django-project-shutterspace-a676bf7fbd5b.herokuapp.com/portfolio/profile/danielcarson/"
+                target="_blank" rel="noopener"
+                class="inline-block bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <span>Live Site</span>
+                </span>
+            </a>
+            <a href="https://github.com/TopG85/ShutterSpace" target="_blank" rel="noopener"
+                class="inline-block bg-purple-100 hover:bg-purple-200 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub Repo</span>
+                </span>
+            </a>
+        </div>
+
+        <section class="project-overview">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-6 nunito-header">Project Overview</h2>
+            <p>
+                ShutterSpace provides a focused alternative to general-purpose social platforms: a clean, responsive
+                space that gives photography the visual priority. It combines professional presentation with community
+                tools so photographers can publish work and engage with other creators.
+            </p>
+        </section>
+
+        <section class="project-features">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-6 nunito-header">Key Features</h2>
+            <ul>
+                <li>Photographer profiles with avatars, hero images, biographies and links</li>
+                <li>Photo uploads and delivery through Cloudinary</li>
+                <li>Likes, comments and notifications to encourage community interaction</li>
+                <li>Public and private visibility controls for portfolio management</li>
+                <li>Responsive layouts designed for desktop, tablet and mobile browsing</li>
+            </ul>
+        </section>
+
+        <section class="project-technologies">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-6 nunito-header">Technical Highlights</h2>
+            <ul>
+                <li>Django ORM models for profiles, photos, comments, likes and notifications</li>
+                <li>PostgreSQL in production with environment-based configuration</li>
+                <li>Cloudinary media hosting for image optimisation and scalable delivery</li>
+                <li>Heroku deployment for the live application</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
