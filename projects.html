@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap"
         rel="stylesheet">
-    <script src="js/nav.js"></script>    
+    <script src="js/nav.js"></script>
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
@@ -46,7 +46,9 @@
                             <li><a href="projects/shutterspace.html"
                                     class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a>
                             </li>
-                            <li><a href="projects/hackathon.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a></li>
+                            <li><a href="projects/hackathon.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="about.html" class="cws-nav-link">About</a></li>
@@ -56,40 +58,77 @@
             </div>
         </nav>
     </header>
-    <section class="relative min-h-screen flex flex-col justify-center items-center py-16">
-        <div class="w-full max-w-2xl mx-auto text-center mb-12">
-            <div style="text-align:center;">
+    <section class="relative min-h-screen flex flex-col justify-center items-center py-16 px-4">
+        <!-- Increased max-w to 4xl to give full-width list items breathing room -->
+        <div class="w-full max-w-4xl mx-auto mb-12">
+
+            <!-- Header Section -->
+            <div class="text-center mb-16">
                 <h1 class="font-extrabold text-purple-800 mb-6 nunito-header"
                     style="font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-1px;line-height:1.08;">Projects</h1>
-                <p class="mb-16 text-blue-900" style="font-size:1.25rem; margin-bottom:4rem;">A selection of my recent
-                    web projects. Click
-                    to learn more about each one.</p>
+                <p class="text-blue-900 text-xl">A selection of my recent web projects. Click to learn more about each
+                    one.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div class="bg-white shadow-lg rounded-lg p-6 w-full text-center">
-                    <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Carb Counter</h2>
-                    <p class="mb-4 text-blue-900">A simple, user-friendly application for tracking carbohydrate intake
-                        and managing insulin dosages.</p>
-                    <a href="projects/carbcounter.html" class="cws-btn project-btn-wide">View Project</a>
+
+            <!-- PROJECT LIST CONTAINER (Swapped from grid to a clean vertical stack) -->
+            <div class="flex flex-col gap-6">
+
+                <!-- Project 1: Carb Counter -->
+                <div
+                    class="bg-white shadow-md rounded-xl p-6 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-transform hover:-translate-y-1">
+                    <div class="max-w-xl">
+                        <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Carb Counter</h2>
+                        <p class="text-blue-900 leading-relaxed">A simple, user-friendly application for tracking
+                            carbohydrate intake and managing insulin dosages.</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="projects/carbcounter.html"
+                            class="cws-btn project-btn-wide inline-block text-center whitespace-nowrap">View Project</a>
+                    </div>
                 </div>
-                <div class="bg-white shadow-lg rounded-lg p-6 w-full text-center">
-                    <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Vinelife Church Wilmslow</h2>
-                    <p class="mb-4 text-blue-900">A modern, responsive site for a local church, featuring event
-                        management and community resources.</p>
-                    <a href="projects/vinelife.html" class="cws-btn project-btn-wide">View Project</a>
+
+                <!-- Project 2: Vinelife Church Wilmslow -->
+                <div
+                    class="bg-white shadow-md rounded-xl p-6 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-transform hover:-translate-y-1">
+                    <div class="max-w-xl">
+                        <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Vinelife Church Wilmslow</h2>
+                        <p class="text-blue-900 leading-relaxed">A modern, responsive site for a local church, featuring
+                            event management and community resources.</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="projects/vinelife.html"
+                            class="cws-btn project-btn-wide inline-block text-center whitespace-nowrap">View Project</a>
+                    </div>
                 </div>
-                <div class="bg-white shadow-lg rounded-lg p-6 w-full text-center">
-                    <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Bitesize Church</h2>
-                    <p class="mb-4 text-blue-900">A simple, accessible site for a digital faith community, optimised
-                        for mobile and easy updates.</p>
-                    <a href="projects/bitesizechurch.html" class="cws-btn project-btn-wide">View Project</a>
+
+                <!-- Project 3: Bitesize Church -->
+                <div
+                    class="bg-white shadow-md rounded-xl p-6 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-transform hover:-translate-y-1">
+                    <div class="max-w-xl">
+                        <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Bitesize Church</h2>
+                        <p class="text-blue-900 leading-relaxed">A simple, accessible site for a digital faith
+                            community, optimised for mobile and easy updates.</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="projects/bitesizechurch.html"
+                            class="cws-btn project-btn-wide inline-block text-center whitespace-nowrap">View Project</a>
+                    </div>
                 </div>
-                <div class="bg-white shadow-lg rounded-lg p-6 w-full text-center">
-                    <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">ShutterSpace</h2>
-                    <p class="mb-4 text-blue-900">A Django photography portfolio platform with profiles, image
-                        sharing, likes and comments.</p>
-                    <a href="projects/shutterspace.html" class="cws-btn project-btn-wide">View Project</a>
+
+                <!-- Project 4: ShutterSpace -->
+                <div
+                    class="bg-white shadow-md rounded-xl p-6 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-transform hover:-translate-y-1">
+                    <div class="max-w-xl">
+                        <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">ShutterSpace</h2>
+                        <p class="text-blue-900 leading-relaxed">A Django photography portfolio platform with profiles,
+                            image sharing, likes and comments.</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="projects/shutterspace.html"
+                            class="cws-btn project-btn-wide inline-block text-center whitespace-nowrap">View Project</a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
