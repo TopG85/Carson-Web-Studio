@@ -474,6 +474,22 @@ header nav > .max-w-6xl {
   background: #fff;
 }
 
+.cover-fade-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-fade-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px; /* how tall the fade area is — adjust to taste */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
+  pointer-events: none;
+}
+
 /* --------------------------------------------------------------------------
    Recent Work cards (homepage project previews)
    -------------------------------------------------------------------------- */
