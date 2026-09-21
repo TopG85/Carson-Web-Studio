@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-import { getFirestore, collection, query, where, orderBy, getDocs }
+import { getFirestore, collection, query, where, getDocs }
     from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -19,10 +19,12 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (!container) return;
 
     try {
+        // No orderBy here on purpose — combining where + orderBy on a
+        // different field requires a Firestore composite index. Sorting
+        // client-side avoids needing to create one.
         const reviewsQuery = query(
             collection(db, 'reviews'),
-            where('approved', '==', true),
-            orderBy('createdAt', 'desc')
+            where('approved', '==', true)
         );
         const snapshot = await getDocs(reviewsQuery);
 
@@ -31,14 +33,21 @@ document.addEventListener('DOMContentLoaded', async function () {
             return;
         }
 
-        const cards = [];
+        const reviews = [];
         snapshot.forEach(function (doc) {
-            cards.push(renderReviewCard(doc.data()));
+            reviews.push(doc.data());
         });
-        container.innerHTML = cards.join('');
+
+        reviews.sort(function (a, b) {
+            const aTime = a.createdAt && a.createdAt.toMillis ? a.createdAt.toMillis() : 0;
+            const bTime = b.createdAt && b.createdAt.toMillis ? b.createdAt.toMillis() : 0;
+            return bTime - aTime;
+        });
+
+        container.innerHTML = reviews.map(renderReviewCard).join('');
     } catch (err) {
         console.error('Failed to load reviews:', err);
-        container.innerHTML = '';
+        container.innerHTML = '<p class="text-center text-blue-900">No reviews yet.</p>';
     }
 
     function renderStars(rating) {
