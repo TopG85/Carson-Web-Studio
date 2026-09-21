@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constcollection | Carson Web Studio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
+    <header>
+        <nav class="bg-white text-blue-900 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
+                style="padding-top:1.5rem;padding-bottom:1.5rem;">
+                <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
+
+                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-links flex space-x-6 font-barlow text-lg">
+                    <li><a href="../index.html" class="cws-nav-link">Home</a></li>
+                    <li class="relative nav-dropdown">
+                        <div class="flex items-center gap-1">
+                            <a href="../projects.html" class="cws-nav-link">Projects</a>
+                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu" aria-expanded="false">▾</button>
+                        </div>
+                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
+                            <li><a href="carbcounter.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Carb Counter App</a></li>
+                            <li><a href="vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
+                            <li><a href="bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
+                            <li><a href="hackathon.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="../contact.html" class="cws-nav-link">Contact</a></li>
+                    <li><a href="../leave-review.html" class="cws-nav-link">Leave a Review</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
+        <section class="project-hero">
+            <h1 class="text-4xl font-bold text-purple-800 mb-8 nunito-header">Constcollection</h1>
+            <p class="project-short-desc">
+                A Django-built, responsive portfolio site for Swedish artist Cecilia Kristoffersson, created
+                during a student hackathon.
+            </p>
+            <ul class="project-details">
+                <li><strong>Role:</strong> Team Hackathon Project — Django Backend (Art Categorisation System)</li>
+                <li><strong>Year:</strong> 2026</li>
+                <li><strong>Technologies:</strong> Python, Django, Bootstrap 5, PostgreSQL, Cloudinary, Heroku</li>
+            </ul>
+        </section>
+
+        <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header text-center mb-6">Project Links</h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="https://hackathon-constcollection-e94b800f4c67.herokuapp.com/" target="_blank" rel="noopener"
+                class="inline-block bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <span>Live Site</span>
+                </span>
+            </a>
+            <a href="https://github.com/SourTarte/hackathon-project-constcollection" target="_blank" rel="noopener"
+                class="inline-block bg-purple-100 hover:bg-purple-200 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub Repo</span>
+                </span>
+            </a>
+        </div>
+
+        <section class="project-overview">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">Project Overview</h2>
+            <p>
+                Constcollection is a minimalist, accessible website built to showcase the work of Swedish artist
+                Cecilia Kristoffersson. The site's main goal was to keep visitors' attention on the artwork
+                itself, while giving the artist a way to manage her own gallery content — without ever needing
+                to touch the Django admin panel directly.
+            </p>
+            <ul style="margin-top:1rem;">
+                <li>A front-end curator mode letting the artist add, edit, or organise her own artwork</li>
+                <li>Separate sections for the gallery, biography, and past exhibitions</li>
+                <li>A colour palette drawn directly from one of the artist's own paintings</li>
+                <li>Deployed on Heroku with a PostgreSQL database and Cloudinary for image hosting</li>
+            </ul>
+        </section>
+
+        <section class="project-problem">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Problem</h2>
+            <ul>
+                <li>The artist needed a professional online presence to showcase her collections</li>
+                <li>Managing content shouldn't require technical knowledge of a Django admin panel</li>
+                <li>The design needed to stay out of the way and let the artwork be the focus</li>
+                <li>The site needed to meet strong accessibility and colour-contrast standards</li>
+            </ul>
+        </section>
+
+        <section class="project-solution">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Solution</h2>
+            <ul>
+                <li>Built a "curator mode" so the artist can add, edit, and organise media from the site itself</li>
+                <li>Modelled Media, Category, and About Section content separately in Django for flexibility</li>
+                <li>A minimalist navigation bar, tucked away in a toggle so it doesn't distract from the art</li>
+                <li>Colour and typography chosen to reflect the artist's own visual style</li>
+                <li>All pages tested against WCAG AAA colour contrast standards</li>
+            </ul>
+        </section>
+
+        <section class="project-features">
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Key Features</h2>
+            <ul>
+                <li><strong>Curator Admin Panel:</strong> Add, edit, or delete artwork, categories, and exhibitions from the front end.</li>
+                <li><strong>Gallery:</strong> Displays all art pieces, filterable by category.</li>
+                <li><strong>About &amp; Exhibitions Pages:</strong> Biography and exhibition history, separate from the gallery itself.</li>
+                <li><strong>Toggle Navigation:</strong> Keeps the interface minimal so the artwork stays the focus.</li>
+                <li><strong>WCAG AAA Contrast:</strong> All colour combinations tested for the strictest accessibility standard.</li>
+            </ul>
+        </section>
+
+        <section class="project-technologies">
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Technologies Used</h2>
+            <ul>
+                <li>Python 3 &amp; Django</li>
+                <li>Bootstrap 5</li>
+                <li>PostgreSQL (hosted on Neon.tech)</li>
+                <li>Cloudinary (image hosting)</li>
+                <li>Gunicorn &amp; Whitenoise</li>
+                <li>Heroku (deployment)</li>
+            </ul>
+        </section>
+
+        <section class="project-outcome">
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Outcome</h2>
+            <p>
+                The team delivered a working, deployed art portfolio site within the hackathon timeframe, with
+                nearly every page passing HTML validation cleanly and all colour choices meeting WCAG AAA
+                contrast requirements. A few known bugs remain around delete-confirmation modals in curator mode
+                (documented in the project's README), with full delete functionality still available through
+                the Django admin panel as a working alternative.
+            </p>
+            <p style="margin-top:1rem;">
+                My contribution focused on the backend categorisation system — building the Django logic that
+                lets the artist organise her media into categories (the different types of art she creates),
+                with each category linking to many pieces of media. It's a feature that works entirely behind
+                the scenes: visitors never see the category system directly, but it's what powers how art is
+                grouped and filtered throughout the site.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

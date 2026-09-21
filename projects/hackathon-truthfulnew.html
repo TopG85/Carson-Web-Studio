@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthful News | Carson Web Studio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
+    <header>
+        <nav class="bg-white text-blue-900 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
+                style="padding-top:1.5rem;padding-bottom:1.5rem;">
+                <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
+
+                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-links flex space-x-6 font-barlow text-lg">
+                    <li><a href="../index.html" class="cws-nav-link">Home</a></li>
+                    <li class="relative nav-dropdown">
+                        <div class="flex items-center gap-1">
+                            <a href="../projects.html" class="cws-nav-link">Projects</a>
+                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu" aria-expanded="false">▾</button>
+                        </div>
+                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
+                            <li><a href="carbcounter.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Carb Counter App</a></li>
+                            <li><a href="vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
+                            <li><a href="bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
+                            <li><a href="hackathon.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="../contact.html" class="cws-nav-link">Contact</a></li>
+                    <li><a href="../leave-review.html" class="cws-nav-link">Leave a Review</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
+        <section class="project-hero">
+            <h1 class="text-4xl font-bold text-purple-800 mb-8 nunito-header">Truthful News</h1>
+            <p class="project-short-desc">
+                A hackathon-built, real-time news and fact-checking platform designed to combat misinformation
+                and promote media literacy through clear, accessible, verified content.
+            </p>
+            <ul class="project-details">
+                <li><strong>Role:</strong> Team Hackathon Project — Wireframes &amp; UX Design</li>
+                <li><strong>Year:</strong> 2026</li>
+                <li><strong>Technologies:</strong> HTML, CSS, JavaScript, News API, Google Fact Check API, OpenWeather API</li>
+            </ul>
+        </section>
+
+        <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header text-center mb-6">Project Links</h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="https://dylanaustin-thedreamer.github.io/Global-Trends/" target="_blank" rel="noopener"
+                class="inline-block bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <span>Live Site</span>
+                </span>
+            </a>
+            <a href="https://github.com/DylanAustin-TheDreamer/Global-Trends" target="_blank" rel="noopener"
+                class="inline-block bg-purple-100 hover:bg-purple-200 text-blue-900 font-bold py-3 px-8 rounded-lg shadow-lg transition text-lg">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub Repo</span>
+                </span>
+            </a>
+        </div>
+
+        <section class="project-overview">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">Project Overview</h2>
+            <p>
+                Truthful News was built by a small team over a hackathon sprint, with the goal of helping people
+                navigate current events confidently — whether they're beginners, non-native speakers, or
+                critical thinkers looking to verify a claim before sharing it. The site combines short, clear
+                news updates with tools to fact-check trending claims, alongside a local weather forecast as a
+                small bonus feature.
+            </p>
+            <ul style="margin-top:1rem;">
+                <li>Fact-check cards showing a claim, its verdict, and a source link with a timestamp</li>
+                <li>A "Trending Claims" alert box highlighting content flagged as false or misleading</li>
+                <li>Search and filtering to find relevant headlines quickly</li>
+                <li>Built with WCAG accessibility compliance in mind from the outset</li>
+            </ul>
+        </section>
+
+        <section class="project-problem">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Problem</h2>
+            <ul>
+                <li>Misinformation spreads quickly online, influencing public opinion and decision-making</li>
+                <li>Many news sources aren't accessible to non-native speakers or new internet users</li>
+                <li>People need a fast way to check whether a viral claim or headline is actually true</li>
+                <li>Existing news sites are rarely designed with accessibility or media literacy as a priority</li>
+            </ul>
+        </section>
+
+        <section class="project-solution">
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6">The Solution</h2>
+            <ul>
+                <li>Short, plain-language news updates instead of dense, jargon-heavy articles</li>
+                <li>A dedicated fact-check section pairing each claim with its verdict and source</li>
+                <li>Mobile-first, responsive layout tested across phone, tablet, and desktop breakpoints</li>
+                <li>Semantic HTML and ARIA labelling throughout to support screen readers and assistive tech</li>
+                <li>Wireframes designed with accessibility and clear content hierarchy as the starting point</li>
+            </ul>
+        </section>
+
+        <section class="project-features">
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Key Features</h2>
+            <ul>
+                <li><strong>Fact-Check Cards:</strong> Each claim is shown with its verdict, source, and a timestamp for transparency.</li>
+                <li><strong>Trending Claims Alerts:</strong> Surfaces claims currently being flagged as false or misleading.</li>
+                <li><strong>Search &amp; Filtering:</strong> Lets users quickly find claims or topics relevant to them.</li>
+                <li><strong>Local Weather Forecast:</strong> A small added-value feature alongside the news content.</li>
+                <li><strong>Accessibility-First Build:</strong> WCAG-compliant, with semantic markup and clear, readable typography.</li>
+            </ul>
+        </section>
+
+        <section class="project-technologies">
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Technologies Used</h2>
+            <ul>
+                <li>HTML5 &amp; CSS3 (Flexbox / Grid, media queries)</li>
+                <li>JavaScript (search, filtering, dynamic content rendering)</li>
+                <li>News API &amp; GNews API for live headlines</li>
+                <li>Google Fact Check Tools API for claim verification</li>
+                <li>OpenWeather API for the local forecast feature</li>
+                <li>GitHub Pages for deployment</li>
+            </ul>
+        </section>
+
+        <section class="project-outcome">
+            <h2 class="text-2xl font-bold text-orange-400 mt-10 mb-4 nunito-header mb-6">Outcome</h2>
+            <p>
+                The team shipped a working, accessible fact-checking platform within the hackathon timeframe,
+                passing W3C HTML and CSS validation with no errors and meeting WCAG accessibility targets. My
+                contribution focused on the wireframes — establishing layouts that prioritised accessibility and
+                a clear user experience, which guided the rest of the team's development work.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>
