@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon Projects | Carson Web Studio</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <script src="../js/nav.js"></script>
 </head>
 
@@ -27,14 +29,23 @@
                     <li class="relative nav-dropdown">
                         <div class="flex items-center gap-1">
                             <a href="/projects.html" class="cws-nav-link">Projects</a>
-                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu" aria-expanded="false">▾</button>
+                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
+                                aria-expanded="false">▾</button>
                         </div>
                         <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
-                            <li><a href="/projects/bolusengine.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a></li>
-                            <li><a href="/projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
-                            <li><a href="/projects/bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
-                            <li><a href="/projects/shutterspace.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a></li>
-                            <li><a href="/projects/hackathon.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a></li>
+                            <li><a href="/projects/bolusengine.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a></li>
+                            <li><a href="/projects/vinelife.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a>
+                            </li>
+                            <li><a href="/projects/bitesizechurch.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a>
+                            </li>
+                            <li><a href="/projects/shutterspace.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a></li>
+                            <li><a href="/projects/hackathon.html"
+                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="/about.html" class="cws-nav-link">About</a></li>
@@ -45,31 +56,34 @@
         </nav>
     </header>
 
-    <section class="relative min-h-screen flex flex-col justify-center items-center py-16">
-        <div class="w-full max-w-2xl mx-auto text-center mb-12">
-            <div style="text-align:center;">
-                <h1 class="font-extrabold text-purple-800 mb-6 nunito-header"
-                    style="font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-1px;line-height:1.08;">Hackathon Projects</h1>
-                <p class="mb-16 text-blue-900" style="font-size:1.25rem; margin-bottom:4rem;">Two team-built projects completed during coding hackathons — fast-paced, collaborative builds
-                    where a small team takes an idea from concept to deployed site in a matter of days.</p>
-            </div>
+    <!-- Main layout bounding wrapper -->
+    <div class="w-full max-w-2xl mx-auto text-center mb-12">
 
-        <div class="flex flex-col items-center gap-10">
-            <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:1rem;">
-                <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Truthful News</h2>
-                <p class="mb-4 text-blue-900">A real-time news and fact-checking platform built to combat
-                    misinformation, with accessible, mobile-first design.</p>
-                <a href="hackathon-truthfulnews.html" class="cws-btn project-btn-wide">View Project</a>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:1rem;">
-                <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Constcollection</h2>
-                <p class="mb-4 text-blue-900">A Django-powered portfolio site for Swedish artist Cecilia
-                    Kristoffersson, letting her manage her own gallery without touching the admin panel.</p>
-                <a href="hackathon-constcollection.html" class="cws-btn project-btn-wide">View Project</a>
-            </div>
+        <!-- Header Section -->
+        <div style="text-align:center;">
+            <h1 class="font-extrabold text-purple-800 mb-6 nunito-header"
+                style="font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-1px;line-height:1.08;">Hackathon Projects</h1>
+            <p class="mb-16 text-blue-900" style="font-size:1.25rem; margin-bottom:4rem;">Two team-built projects
+                completed during coding hackathons — fast-paced, collaborative builds
+                where a small team takes an idea from concept to deployed site in a matter of days.</p>
         </div>
-    </section>
+
+        <!--Hackathon Card 1: Truthful News-->
+        <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:1rem;">
+            <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Truthful News</h2>
+            <p class="mb-4 text-blue-900">A real-time news and fact-checking platform built to combat
+                misinformation, with accessible, mobile-first design.</p>
+            <a href="hackathon-truthfulnews.html" class="cws-btn project-btn-wide">View Project</a>
+        </div>
+
+        <!--Hackathon Card 2: Constcollection-->
+        <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center" style="margin-bottom:1rem;">
+            <h2 class="text-2xl font-bold text-purple-800 mb-2 nunito-header">Constcollection</h2>
+            <p class="mb-4 text-blue-900">A Django-powered portfolio site for Swedish artist Cecilia
+                Kristoffersson, letting her manage her own gallery without touching the admin panel.</p>
+            <a href="hackathon-constcollection.html" class="cws-btn project-btn-wide">View Project</a>
+        </div>
+    </div>
 
 </body>
 
