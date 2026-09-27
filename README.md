@@ -4,7 +4,7 @@
 Carson Web Studio — Web Designer & Developer
 I design and build modern, responsive websites for churches, charities and organisations.
 
-🔗 **Live site:** [topg85.github.io/Carson-Web-Studio](https://topg85.github.io/Carson-Web-Studio/)
+🔗 **Live site:** [topg85.github.io/Carson-Web-Studio](https://www.carsonwebstudio)
 
 ---
 
