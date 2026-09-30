@@ -2,46 +2,35 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Mobile burger toggle ---
   var burger = document.querySelector('.nav-burger');
   var navLinks = document.querySelector('.nav-links');
+  var projectSubnav = document.getElementById('project-subnav');
+  var projectsToggle = document.querySelector('.nav-projects-toggle');
 
   if (burger && navLinks) {
     burger.addEventListener('click', function () {
       var isOpen = navLinks.classList.toggle('nav-open');
       burger.classList.toggle('nav-burger-open', isOpen);
       burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      // Reset the project list to closed whenever the mobile menu opens
+      if (isOpen && projectSubnav && projectsToggle) {
+        projectSubnav.classList.remove('project-subnav-open');
+        projectsToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
-  // --- Click-based Projects dropdown (works the same on desktop and mobile) ---
-  document.querySelectorAll('.nav-dropdown').forEach(function (dropdown) {
-    var trigger = dropdown.querySelector('.nav-dropdown-trigger');
-    var menu = dropdown.querySelector('.nav-dropdown-menu');
-    if (!trigger || !menu) return;
+  // --- Projects subnav toggle ---
+  if (projectsToggle && projectSubnav) {
+    projectsToggle.addEventListener('click', function () {
+      var isOpen = projectSubnav.classList.toggle('project-subnav-open');
+      projectsToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 
-    trigger.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var isOpen = menu.classList.toggle('nav-dropdown-open');
-      trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  });
-
-  // Close any open dropdown when clicking outside it
-  document.addEventListener('click', function (e) {
-    document.querySelectorAll('.nav-dropdown-menu.nav-dropdown-open').forEach(function (menu) {
-      if (!menu.parentElement.contains(e.target)) {
-        menu.classList.remove('nav-dropdown-open');
-        var trigger = menu.parentElement.querySelector('.nav-dropdown-trigger');
-        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      // On mobile, close the burger menu so the revealed project list is visible
+      if (navLinks && navLinks.classList.contains('nav-open')) {
+        navLinks.classList.remove('nav-open');
+        burger.classList.remove('nav-burger-open');
+        burger.setAttribute('aria-expanded', 'false');
       }
     });
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.nav-dropdown-menu.nav-dropdown-open').forEach(function (menu) {
-        menu.classList.remove('nav-dropdown-open');
-      });
-    }
-  });
+  }
 });

@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
-    <script src="js/nav.js"></script>
+    <script src="../js/nav.js"></script>
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
     <header>
-        <nav class="bg-white text-blue-900 shadow-lg">
+        <nav class="bg-white text-blue-900">
             <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
                 style="padding-top:1.5rem;padding-bottom:1.5rem;">
                 <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
@@ -27,30 +29,8 @@
 
                 <ul class="nav-links flex space-x-6 font-barlow text-lg">
                     <li><a href="/index.html" class="cws-nav-link">Home</a></li>
-                    <li class="relative nav-dropdown">
-                        <div class="flex items-center gap-1">
-                            <a href="/projects.html" class="cws-nav-link">Projects</a>
-                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
-                                aria-expanded="false">▾</button>
-                        </div>
-                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
-                            <li><a href="/projects/bolusengine.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a>
-                            </li>
-                            <li><a href="/projects/vinelife.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a>
-                            </li>
-                            <li><a href="/projects/bitesizechurch.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a>
-                            </li>
-                            <li><a href="/projects/shutterspace.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a>
-                            </li>
-                            <li><a href="/projects/hackathon.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><a href="#project-subnav-toggle" class="cws-nav-link nav-projects-toggle project-subnav">Projects</a></li>
+                    <li><a href="/services.html" class="cws-nav-link font-bold text-purple-800">Services & Pricing</a></li>
                     <li><a href="/about.html" class="cws-nav-link">About</a></li>
                     <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
                     <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
@@ -58,6 +38,17 @@
             </div>
         </nav>
     </header>
+
+    <div class="project-subnav" id="project-subnav">
+        <ul>
+            <li><a href="/projects/bolusengine.html">BolusEngine</a></li>
+            <li><a href="/projects/vinelife.html">Vinelife Church</a></li>
+            <li><a href="/projects/bitesizechurch.html">Bitesize Church</a></li>
+            <li><a href="/projects/shutterspace.html">ShutterSpace</a></li>
+            <li><a href="/projects/hackathon.html">Hackathon Projects</a></li>
+        </ul>
+    </div>
+  </header>
 
     <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
         <section class="project-hero">
@@ -69,47 +60,48 @@
             <ul class="project-details">
                 <li><strong>Role:</strong> Web Design &amp; Development</li>
                 <li><strong>Year:</strong> 2026</li>
-                <li><strong>Technologies:</strong> 
+                <li><strong>Technologies:</strong>
 
-                <!-- TECHNOLOGY GRID CONTAINER: Aligns badges neatly with text label -->
-                <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; margin-top: 24px; margin-bottom: 24px;">
+                    <!-- TECHNOLOGY GRID CONTAINER: Aligns badges neatly with text label -->
+                    <div
+                        style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; margin-top: 24px; margin-bottom: 24px;">
 
-                    <!--- HTML5 --->
-                    <a href="https://mozilla.org" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group text-center">
-                        <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">HTML5</span>
-                    </a>
-                    <!--- Tailwind CSS --->
-                    <a href="https://tailwindcss.com/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group text-center">
-                        <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" width="40"
-                            height="40" class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Tailwind CSS</span>
-                    </a>
-                    <!--- Python --->
-                    <a href="https://www.python.org/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group text-center">
-                        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Python</span>
-                    </a>
-                    <!--- Django --->
-                    <a href="https://www.djangoproject.com/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group text-center">
-                        <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Django</span>
-                    </a>
-                    <!--- Wagtail CMS --->
-                    <a href="https://wagtail.org/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group text-center">
-                        <img src="https://cdn.simpleicons.org/wagtail/1A1A1A" alt="Wagtail CMS" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Wagtail CMS</span>
-                    </a>
-                </div>
+                        <!--- HTML5 --->
+                        <a href="https://mozilla.org" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group text-center">
+                            <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="40" height="40"
+                                class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">HTML5</span>
+                        </a>
+                        <!--- Tailwind CSS --->
+                        <a href="https://tailwindcss.com/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group text-center">
+                            <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Tailwind CSS</span>
+                        </a>
+                        <!--- Python --->
+                        <a href="https://www.python.org/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group text-center">
+                            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" width="40" height="40"
+                                class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Python</span>
+                        </a>
+                        <!--- Django --->
+                        <a href="https://www.djangoproject.com/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group text-center">
+                            <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" width="40" height="40"
+                                class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Django</span>
+                        </a>
+                        <!--- Wagtail CMS --->
+                        <a href="https://wagtail.org/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group text-center">
+                            <img src="https://cdn.simpleicons.org/wagtail/1A1A1A" alt="Wagtail CMS" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Wagtail CMS</span>
+                        </a>
+                    </div>
 
                 <li>
                     <img src="../images/bitesize.webp" alt="Bitesize Church Colshaw" class="inline-block"
@@ -136,7 +128,8 @@
         </div>
 
         <section class="cws-section project-problem">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The Problem</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The
+                Problem</h2>
             <ul>
                 <li>No website — only a Facebook page for updates</li>
                 <li>Owner concerned about the cost of a website</li>
@@ -146,7 +139,8 @@
         </section>
 
         <section class="cws-section project-solution">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The Solution</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The
+                Solution</h2>
             <ul>
                 <li>Developed with Django and Wagtail CMS for easy, Facebook - like content updates</li>
                 <li>Owner can log in and add/edit news, events, and images without coding</li>
@@ -157,7 +151,8 @@
         </section>
 
         <section class="cws-section project-features">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Key Features</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Key
+                Features</h2>
             <ul>
                 <li><strong>Easy Content Management:</strong> Owner can update pages, news, and events via a
                     user-friendly admin panel.</li>
@@ -168,7 +163,8 @@
         </section>
 
         <section class="cws-section project-outcome">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Outcome</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Outcome
+            </h2>
             <p>
                 Bitesize Church now has a professional, easy-to-update website. The owner can manage content without
                 technical help, and the church’s activities are more visible to the local community and beyond.

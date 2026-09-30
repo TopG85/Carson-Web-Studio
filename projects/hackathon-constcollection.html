@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constcollection | Carson Web Studio</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
     <script src="../js/nav.js"></script>
@@ -14,7 +16,7 @@
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
     <header>
-        <nav class="bg-white text-blue-900 shadow-lg">
+        <nav class="bg-white text-blue-900">
             <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
                 style="padding-top:1.5rem;padding-bottom:1.5rem;">
                 <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
@@ -25,25 +27,26 @@
 
                 <ul class="nav-links flex space-x-6 font-barlow text-lg">
                     <li><a href="/index.html" class="cws-nav-link">Home</a></li>
-                    <li class="relative nav-dropdown">
-                        <div class="flex items-center gap-1">
-                            <a href="/projects.html" class="cws-nav-link">Projects</a>
-                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu" aria-expanded="false">▾</button>
-                        </div>
-                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
-                            <li><a href="/projects/bolusengine.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a></li>
-                            <li><a href="/projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
-                            <li><a href="/projects/bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
-                            <li><a href="/projects/shutterspace.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a></li>
-                            <li><a href="/projects/hackathon.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#project-subnav-toggle" class="cws-nav-link nav-projects-toggle project-subnav">Projects</a></li>
+                    <li><a href="/services.html" class="cws-nav-link">Services & Pricing</a></li>
                     <li><a href="/about.html" class="cws-nav-link">About</a></li>
                     <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
                     <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
                 </ul>
             </div>
         </nav>
+    </header>
+
+    <div class="project-subnav" id="project-subnav">
+        <ul>
+            <li><a href="/projects/bolusengine.html">BolusEngine</a></li>
+            <li><a href="/projects/vinelife.html">Vinelife Church</a></li>
+            <li><a href="/projects/bitesizechurch.html">Bitesize Church</a></li>
+            <li><a href="/projects/shutterspace.html">ShutterSpace</a></li>
+            <li><a href="/projects/hackathon.html">Hackathon Projects</a></li>
+        </ul>
+    </div>
+    </nav>
     </header>
 
     <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
@@ -56,79 +59,81 @@
             <ul class="project-details">
                 <li><strong>Role:</strong> Team Hackathon Project — Django Backend (Art Categorisation System)</li>
                 <li><strong>Year:</strong> 2026</li>
-                <li><strong>Technologies:</strong> 
-                    
+                <li><strong>Technologies:</strong>
+
                     <!--- Technologies --->
-                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; margin-top: 24px; margin-bottom: 24px;">
-                    
-                    <!--HTML-->
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">HTML5</span>
-                    </a>
+                    <div
+                        style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; margin-top: 24px; margin-bottom: 24px;">
 
-                    <!--Bootstrap-->
-                    <a href="https://getbootstrap.com/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="https://cdn.simpleicons.org/bootstrap/85117A" alt="Bootstrap logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Bootstrap</span>
-                    </a>
+                        <!--HTML-->
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 logo" width="40" height="40"
+                                class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">HTML5</span>
+                        </a>
 
-                    <!--JavaScript-->
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">JavaScript</span>
-                    </a>
+                        <!--Bootstrap-->
+                        <a href="https://getbootstrap.com/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="https://cdn.simpleicons.org/bootstrap/85117A" alt="Bootstrap logo" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Bootstrap</span>
+                        </a>
 
-                    <!--- Python --->
-                    <a href="https://www.python.org/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Python</span>
-                    </a>
+                        <!--JavaScript-->
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">JavaScript</span>
+                        </a>
 
-                    <!--- Django --->
-                    <a href="https://www.djangoproject.com/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="https://cdn.simpleicons.org/django/092E20" alt="Django logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Django</span>
-                    </a>
+                        <!--- Python --->
+                        <a href="https://www.python.org/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Python</span>
+                        </a>
 
-                    <!--- PostgreSQL --->
-                    <a href="https://www.postgresql.org/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="https://cdn.simpleicons.org/postgresql/336791" alt="PostgreSQL logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">PostgreSQL</span>
-                    </a>
+                        <!--- Django --->
+                        <a href="https://www.djangoproject.com/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="https://cdn.simpleicons.org/django/092E20" alt="Django logo" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Django</span>
+                        </a>
 
-                    <!--- Cloudinary --->
-                    <a href="https://cloudinary.com/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="https://cdn.simpleicons.org/cloudinary/000000" alt="Cloudinary logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Cloudinary</span>
-                    </a>
+                        <!--- PostgreSQL --->
+                        <a href="https://www.postgresql.org/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="https://cdn.simpleicons.org/postgresql/336791" alt="PostgreSQL logo" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">PostgreSQL</span>
+                        </a>
 
-                    <!--- Heroku --->
-                    <a href="https://www.heroku.com/" target="_blank" rel="noopener"
-                        class="flex flex-col items-center gap-1 group">
-                        <img src="../images/Heroku-Logo-Mark-Light-RGB.png" alt="Heroku logo" width="40" height="40"
-                            class="group-hover:scale-105 transition-transform">
-                        <span class="text-xs font-bold text-slate-600 mt-1">Heroku</span>
-                    </a>
+                        <!--- Cloudinary --->
+                        <a href="https://cloudinary.com/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="https://cdn.simpleicons.org/cloudinary/000000" alt="Cloudinary logo" width="40"
+                                height="40" class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Cloudinary</span>
+                        </a>
+
+                        <!--- Heroku --->
+                        <a href="https://www.heroku.com/" target="_blank" rel="noopener"
+                            class="flex flex-col items-center gap-1 group">
+                            <img src="../images/Heroku-Logo-Mark-Light-RGB.png" alt="Heroku logo" width="40" height="40"
+                                class="group-hover:scale-105 transition-transform">
+                            <span class="text-xs font-bold text-slate-600 mt-1">Heroku</span>
+                        </a>
                     </div>
 
                 </li>
 
-                <img src="../images/constcollection.webp" alt="Screenshot of Constcollection project" class="project-screenshot mt-4 rounded-lg shadow-lg">
+                <img src="../images/constcollection.webp" alt="Screenshot of Constcollection project"
+                    class="project-screenshot mt-4 rounded-lg shadow-lg">
             </ul>
         </section>
 
@@ -151,7 +156,8 @@
         </div>
 
         <section class="cws-section project-overview">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Project Overview</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Project
+                Overview</h2>
             <p>
                 Constcollection is a minimalist, accessible website built to showcase the work of Swedish artist
                 Cecilia Kristoffersson. The site's main goal was to keep visitors' attention on the artwork
@@ -167,7 +173,8 @@
         </section>
 
         <section class="cws-section project-problem">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The Problem</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The
+                Problem</h2>
             <ul>
                 <li>The artist needed a professional online presence to showcase her collections</li>
                 <li>Managing content shouldn't require technical knowledge of a Django admin panel</li>
@@ -177,7 +184,8 @@
         </section>
 
         <section class="cws-section project-solution">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The Solution</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The
+                Solution</h2>
             <ul>
                 <li>Built a "curator mode" so the artist can add, edit, and organise media from the site itself</li>
                 <li>Modelled Media, Category, and About Section content separately in Django for flexibility</li>
@@ -188,18 +196,23 @@
         </section>
 
         <section class="cws-section project-features">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Key Features</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Key
+                Features</h2>
             <ul>
-                <li><strong>Curator Admin Panel:</strong> Add, edit, or delete artwork, categories, and exhibitions from the front end.</li>
+                <li><strong>Curator Admin Panel:</strong> Add, edit, or delete artwork, categories, and exhibitions from
+                    the front end.</li>
                 <li><strong>Gallery:</strong> Displays all art pieces, filterable by category.</li>
-                <li><strong>About &amp; Exhibitions Pages:</strong> Biography and exhibition history, separate from the gallery itself.</li>
+                <li><strong>About &amp; Exhibitions Pages:</strong> Biography and exhibition history, separate from the
+                    gallery itself.</li>
                 <li><strong>Toggle Navigation:</strong> Keeps the interface minimal so the artwork stays the focus.</li>
-                <li><strong>WCAG AAA Contrast:</strong> All colour combinations tested for the strictest accessibility standard.</li>
+                <li><strong>WCAG AAA Contrast:</strong> All colour combinations tested for the strictest accessibility
+                    standard.</li>
             </ul>
         </section>
 
         <section class="cws-section project-outcome">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Outcome</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Outcome
+            </h2>
             <p>
                 The team delivered a working, deployed art portfolio site within the hackathon timeframe, with
                 nearly every page passing HTML validation cleanly and all colour choices meeting WCAG AAA

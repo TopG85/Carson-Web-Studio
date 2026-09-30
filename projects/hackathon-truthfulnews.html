@@ -6,54 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truthful News | Carson Web Studio</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>
     <script src="../js/nav.js"></script>
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
     <header>
-        <nav class="bg-white text-blue-900 shadow-lg">
+        <nav class="bg-white text-blue-900">
             <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
                 style="padding-top:1.5rem;padding-bottom:1.5rem;">
                 <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
 
-                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-
                 <ul class="nav-links flex space-x-6 font-barlow text-lg">
                     <li><a href="/index.html" class="cws-nav-link">Home</a></li>
-                    <li class="relative nav-dropdown">
-                        <div class="flex items-center gap-1">
-                            <a href="/projects.html" class="cws-nav-link">Projects</a>
-                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
-                                aria-expanded="false">▾</button>
-                        </div>
-                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
-                            <li><a href="/projects/bolusengine.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a>
-                            </li>
-                            <li><a href="/projects/vinelife.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a>
-                            </li>
-                            <li><a href="/projects/bitesizechurch.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a>
-                            </li>
-                            <li><a href="/projects/shutterspace.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a>
-                            </li>
-                            <li><a href="/projects/hackathon.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="/about.html" class="cws-nav-link">About</a></li>
-                    <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
-                    <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
-                </ul>
+                    <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+
+                    <ul class="nav-links flex space-x-6 font-barlow text-lg">
+                        <li><a href="/index.html" class="cws-nav-link">Home</a></li>
+                        <li><a href="#project-subnav-toggle"
+                                class="cws-nav-link nav-projects-toggle project-subnav">Projects</a></li>
+                        <li><a href="/services.html" class="cws-nav-link">Services &
+                                Pricing</a></li>
+                        <li><a href="/about.html" class="cws-nav-link">About</a></li>
+                        <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
+                        <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
+                    </ul>
             </div>
         </nav>
+    </header>
+
+    <div class="project-subnav" id="project-subnav">
+        <ul>
+            <li><a href="/projects/bolusengine.html">BolusEngine</a></li>
+            <li><a href="/projects/vinelife.html">Vinelife Church</a></li>
+            <li><a href="/projects/bitesizechurch.html">Bitesize Church</a></li>
+            <li><a href="/projects/shutterspace.html">ShutterSpace</a></li>
+            <li><a href="/projects/hackathon.html">Hackathon Projects</a></li>
+        </ul>
+    </div>
+    </nav>
     </header>
 
     <main class="w-full max-w-3xl mx-auto text-left py-10 px-4 flex-1">
@@ -149,7 +145,8 @@
         </div>
 
         <section class="cws-section project-overview">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Project Overview</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Project
+                Overview</h2>
             <p>
                 Truthful News was built by a small team over a hackathon sprint, with the goal of helping people
                 navigate current events confidently — whether they're beginners, non-native speakers, or
@@ -166,7 +163,8 @@
         </section>
 
         <section class="cws-section project-problem">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The Problem</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The
+                Problem</h2>
             <ul>
                 <li>Misinformation spreads quickly online, influencing public opinion and decision-making</li>
                 <li>Many news sources aren't accessible to non-native speakers or new internet users</li>
@@ -176,7 +174,8 @@
         </section>
 
         <section class="cws-section project-solution">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The Solution</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">The
+                Solution</h2>
             <ul>
                 <li>Short, plain-language news updates instead of dense, jargon-heavy articles</li>
                 <li>A dedicated fact-check section pairing each claim with its verdict and source</li>
@@ -187,7 +186,8 @@
         </section>
 
         <section class="cws-section project-features">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Key Features</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Key
+                Features</h2>
             <ul>
                 <li><strong>Fact-Check Cards:</strong> Each claim is shown with its verdict, source, and a timestamp for
                     transparency.</li>
@@ -203,7 +203,8 @@
         </section>
 
         <section class="cws-section project-technologies">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Technologies Used</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">
+                Technologies Used</h2>
             <ul>
                 <li>HTML5 & CSS3 (Flexbox / Grid, media queries)</li>
                 <li>JavaScript (search, filtering, dynamic content rendering)</li>
@@ -215,7 +216,8 @@
         </section>
 
         <section class="cws-section project-outcome">
-            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Outcome</h2>
+            <h2 class="text-2xl font-bold text-blue-900 mt-10 mb-4 nunito-header mb-6" style="color: #1e3a8a;">Outcome
+            </h2>
             <p>
                 The team shipped a working, accessible fact-checking platform within the hackathon timeframe,
                 passing W3C HTML and CSS validation with no errors and meeting WCAG accessibility targets. My
@@ -226,7 +228,7 @@
 
     </main>
 
-    
+
 </body>
 
 </html>

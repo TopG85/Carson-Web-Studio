@@ -11,7 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap"
         rel="stylesheet">
-    <script src="js/nav.js"></script>
+    <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>      
+    <script src="../js/nav.js"></script>
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
@@ -29,10 +30,12 @@
                     <li><a href="/index.html" class="cws-nav-link">Home</a></li>
                     <li class="relative nav-dropdown">
                         <div class="flex items-center gap-1">
-                            <a href="/projects.html" class="cws-nav-link">Projects</a>
-                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
-                                aria-expanded="false">▾</button>
-                        </div>
+                                <a href="/projects.html" class="cws-nav-link">Projects</a>
+                                <i class="fa-solid fa-bars"></i>
+                                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                                    <span></span><span></span><span></span>
+                                </button>
+                            </div>
                         <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
                             <li><a href="/projects/bolusengine.html"
                                     class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a>
@@ -51,6 +54,7 @@
                             </li>
                         </ul>
                     </li>
+                    <li><a href="/services.html" class="cws-nav-link">Services & Pricing</a></li>
                     <li><a href="/about.html" class="cws-nav-link">About</a></li>
                     <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
                     <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>

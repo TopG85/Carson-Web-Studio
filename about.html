@@ -10,15 +10,16 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap"
 		rel="stylesheet">
+	<script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>  	
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-	<script src="js/nav.js"></script>
+	<script src="../js/nav.js"></script>
 
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base" style="color:#1e3a8a;">
 	<header>
-		<nav class="bg-white text-blue-900 shadow-lg">
+		<nav class="bg-white text-blue-900">
 			<div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
 				style="padding-top:1.5rem;padding-bottom:1.5rem;">
 				<h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
@@ -28,37 +29,33 @@
 				</button>
 
 				<ul class="nav-links flex space-x-6 font-barlow text-lg">
-					<li><a href="/index.html" class="cws-nav-link">Home</a></li>
 					<li class="relative nav-dropdown">
-						<div class="flex items-center gap-1">
-							<a href="/projects.html" class="cws-nav-link">Projects</a>
-							<button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
-								aria-expanded="false">▾</button>
-						</div>
-						<ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
-							<li><a href="/projects/bolusengine.html"
-									class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a>
-							</li>
-							<li><a href="/projects/vinelife.html"
-									class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a>
-							</li>
-							<li><a href="/projects/bitesizechurch.html"
-									class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a>
-							</li>
-							<li><a href="/projects/shutterspace.html"
-									class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a>
-							</li>
-							<li><a href="/projects/hackathon.html"
-									class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a>
-							</li>
-						</ul>
-					</li>
-					<li><a href="/about.html" class="cws-nav-link">About</a></li>
-					<li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
-					<li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
-				</ul>
-			</div>
-		</nav>
+                        <div class="flex items-center gap-1">
+                           <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-links flex space-x-6 font-barlow text-lg">
+                    <li><a href="/index.html" class="cws-nav-link">Home</a></li>
+                    <li><a href="#project-subnav-toggle" class="cws-nav-link nav-projects-toggle project-subnav">Projects</a></li>
+                    <li><a href="/services.html" class="cws-nav-link">Services & Pricing</a></li>
+                    <li><a href="/about.html" class="cws-nav-link">About</a></li>
+                    <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
+                    <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="project-subnav" id="project-subnav">
+        <ul>
+            <li><a href="/projects/bolusengine.html">BolusEngine</a></li>
+            <li><a href="/projects/vinelife.html">Vinelife Church</a></li>
+            <li><a href="/projects/bitesizechurch.html">Bitesize Church</a></li>
+            <li><a href="/projects/shutterspace.html">ShutterSpace</a></li>
+            <li><a href="/projects/hackathon.html">Hackathon Projects</a></li>
+        </ul>
+    </div>
 	</header>
 	<main class="w-full max-w-3xl mx-auto flex-1 px-4 py-10">
 		<section class="cws-hero text-center">
@@ -82,14 +79,55 @@
 		</section>
 
 		<section class="cws-section">
+			<h2 class="text-2xl font-bold mb-4 nunito-header" style="color:#1e3a8a;">Mission</h2>
+			<p class="text-lg cws-muted mb-4">To help small businesses become genuinely visible and successful online,
+				combining technical skill with creative and visual understanding — making expert-level web and SEO help
+				accessible to people who might otherwise be priced out or overlooked by big agencies.
+			</p>
+			<h3 class="text-xl font-bold mb-2 nunito-header" style="color:#1e3a8a;">Core Values</h3>
+			<ol>
+				<li><span class="font-bold">Empathy-led problem solving</span>— I listen first, taking the time to
+					properly understand a problem rather
+					than assuming or overwhelming clients with jargon</li>
+				<li><span class="font-bold"></span>Honesty over hype</span> — I give straight, accurate advice, and I'm
+					upfront when something needs correcting
+					rather than doubling down</li>
+				<li><span class="font-bold">Creativity + logic combined</span> — my photography background isn't
+					separate from my development work; it
+					shapes how I think about visual brands, user experience, and storytelling</li>
+				<li><span class="font-bold">Growth-minded</span> — my own career journey, from photography into software
+					development, reflects a belief in
+					real growth over staying comfortable</li>
+				<li><span class="font-bold">Accessible expertise</span> — I believe good technical help shouldn't be out
+					of reach, and I care about
+					genuinely helping people, not just billing hours</li>
+			</ol>
+		</section>
+
+		<section class="cws-section">
+			<h2 class="text-2xl font-bold mb-4 nunito-header" style="color:#1e3a8a;">Positioning</h2>
+			<p class="text-lg cws-muted mb-4">I'm not "just another developer" or "just another photographer" — I
+				sit at the intersection: a creative technologist who understands both how something looks and how it
+				works.
+				My background means I can speak to creative small businesses and photographers in a way a purely
+				technical developer often can't — I've been in their shoes.</p>
+
+			<h2 class="text-2xl font-bold mb-4 nunito-header" style="color:#1e3a8a;">Unique Value Proposition</h2>
+			<p class="text-lg cws-muted mb-4">"I help creative and small businesses fix what's holding their website
+				back — combining a developer's technical eye with a photographer's understanding of visual
+				storytelling — so they're not just online, but actually found."</p>
+		</section>
+
+		<section class="cws-section">
 			<h2 class="text-2xl font-bold mb-4 nunito-header" style="color:#1e3a8a;">Background</h2>
 
 			<p class="text-lg leading-relaxed mb-6">
 				Before moving into web development, I spent several years working as a natural light portrait and
 				fashion photographer. That experience developed my eye for composition, colour and visual storytelling —
 				skills that now influence the way I approach web design. My work and technical workflows were even
-				featured nationally in <a href=https://amateurphotographer.com/technique/portrait_photography/how-to-capture-stunning-portraits-in-natural-light/ target="_blank" rel="noopener"
-					class="text-blue-600 font-bold hover:underline"
+				featured nationally in <a
+					href=https://amateurphotographer.com/technique/portrait_photography/how-to-capture-stunning-portraits-in-natural-light/
+					target="_blank" rel="noopener" class="text-blue-600 font-bold hover:underline"
 					style="color: #2563eb; text-decoration: underline;">Amateur Photographer Magazine</a>.
 			</p>
 
@@ -153,7 +191,7 @@
 			</div>
 
 			<!-- Item 3 -->
-			<p class="text-lg leading-relaxed mb-6"> 
+			<p class="text-lg leading-relaxed mb-6">
 				Through Carson Web Studio, I enjoy helping churches, charities and community organisations create
 				websites that clearly communicate who they are and make it easy for people to connect with them.
 			</p>

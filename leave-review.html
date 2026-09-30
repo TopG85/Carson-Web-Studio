@@ -6,35 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leave a Review | Carson Web Studio</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/45c34bc089.js" crossorigin="anonymous"></script>      
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
     <header>
-        <nav class="bg-white text-blue-900 shadow-lg">
+        <nav class="bg-white text-blue-900">
             <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
                 style="padding-top:1.5rem;padding-bottom:1.5rem;">
                 <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
 
-                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                <ul class="nav-links flex space-x-6 font-barlow text-lg">
+                    <li class="relative nav-dropdown">
+                        <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
 
                 <ul class="nav-links flex space-x-6 font-barlow text-lg">
                     <li><a href="/index.html" class="cws-nav-link">Home</a></li>
-                    <li class="relative nav-dropdown">
-                        <div class="flex items-center gap-1">
-                            <a href="/projects.html" class="cws-nav-link">Projects</a>
-                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu" aria-expanded="false">▾</button>
-                        </div>
-                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
-                            <li><a href="/projects/bolusengine.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a></li>
-                            <li><a href="/projects/vinelife.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a></li>
-                            <li><a href="/projects/bitesizechurch.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a></li>
-                            <li><a href="/projects/shutterspace.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a></li>
-                            <li><a href="/projects/hackathon.html" class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#project-subnav-toggle" class="cws-nav-link nav-projects-toggle project-subnav">Projects</a></li>
+                    <li><a href="/services.html" class="cws-nav-link">Services & Pricing</a></li>
                     <li><a href="/about.html" class="cws-nav-link">About</a></li>
                     <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
                     <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
@@ -43,57 +37,119 @@
         </nav>
     </header>
 
+    <div class="project-subnav" id="project-subnav">
+        <ul>
+            <li><a href="/projects/bolusengine.html">BolusEngine</a></li>
+            <li><a href="/projects/vinelife.html">Vinelife Church</a></li>
+            <li><a href="/projects/bitesizechurch.html">Bitesize Church</a></li>
+            <li><a href="/projects/shutterspace.html">ShutterSpace</a></li>
+            <li><a href="/projects/hackathon.html">Hackathon Projects</a></li>
+        </ul>
+    </div>
+    </nav>
+    </header>
+
     <main class="flex-1 w-full px-4 py-10">
         <section class="max-w-2xl mx-auto text-center py-10">
             <h1 class="text-4xl font-bold nunito-header text-purple-800 mb-4">Leave a Review</h1>
             <p class="text-lg mb-10" id="form-intro">
-                Worked with me on a project? I'd love to hear how it went. 
+                Worked with me on a project? I'd love to hear how it went.
             </p>
 
-            <form id="review-form" class="flex flex-col space-y-6 text-left">
+            <form id="review-form" class="contact-form flex flex-col space-y-6 text-left">
 
+                <!-- Rating -->
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Your rating</label>
-                    <div class="star-picker" id="star-picker" role="radiogroup" aria-label="Star rating">
-                        <span class="star-picker-star" data-value="1">★</span>
-                        <span class="star-picker-star" data-value="2">★</span>
-                        <span class="star-picker-star" data-value="3">★</span>
-                        <span class="star-picker-star" data-value="4">★</span>
-                        <span class="star-picker-star" data-value="5">★</span>
+                    <label class="block text-sm font-semibold mb-1" style="color:#1e3a8a;">
+                        Your Rating
+                    </label>
+
+                    <p class="text-sm mb-2" style="color:#1e3a8a;">
+                        Select between one and five stars.
+                    </p>
+
+                    <div class="star-picker" id="star-picker" role="group" aria-label="Star rating">
+
+                        <span class="star-picker-star" data-value="1" role="button" tabindex="0" aria-label="1 star">
+                            ☆
+                        </span>
+
+                        <span class="star-picker-star" data-value="2" role="button" tabindex="0" aria-label="2 stars">
+                            ☆
+                        </span>
+
+                        <span class="star-picker-star" data-value="3" role="button" tabindex="0" aria-label="3 stars">
+                            ☆
+                        </span>
+
+                        <span class="star-picker-star" data-value="4" role="button" tabindex="0" aria-label="4 stars">
+                            ☆
+                        </span>
+
+                        <span class="star-picker-star" data-value="5" role="button" tabindex="0" aria-label="5 stars">
+                            ☆
+                        </span>
                     </div>
-                    <input type="hidden" name="rating" id="rating-value" value="" required>
+
+                    <input type="hidden" name="rating" id="rating-value" value="">
+
+                    <p id="rating-help" class="text-sm mt-2" style="color:#1e3a8a;">
+                        No rating selected
+                    </p>
                 </div>
 
+                <!-- Name -->
                 <div>
-                    <label for="name" class="block text-sm font-semibold mb-1">Your name</label>
-                    <input type="text" id="name" name="name" required
-                        class="w-full rounded-lg border border-gray-300 px-4 py-2">
+                    <label for="name" class="block text-sm font-semibold mb-1" style="color:#1e3a8a;">
+                        Your Name
+                    </label>
+
+                    <input type="text" id="name" name="name" placeholder="Type your full name here" autocomplete="name"
+                        required class="contact-input">
                 </div>
 
+                <!-- Project -->
                 <div>
-                    <label for="project" class="block text-sm font-semibold mb-1">Which project?</label>
+                    <label for="project" class="block text-sm font-semibold mb-1" style="color:#1e3a8a;">
+                        Which Project?
+                    </label>
+
                     <input type="text" id="project" name="project" placeholder="e.g. Vinelife Church Wilmslow"
-                        class="w-full rounded-lg border border-gray-300 px-4 py-2">
+                        class="contact-input">
                 </div>
 
+                <!-- Email -->
                 <div>
-                    <label for="email" class="block text-sm font-semibold mb-1">Your email (not published)</label>
-                    <input type="email" id="email" name="email" required
-                        class="w-full rounded-lg border border-gray-300 px-4 py-2">
+                    <label for="email" class="block text-sm font-semibold mb-1" style="color:#1e3a8a;">
+                        Your Email
+                        <span class="font-normal">(not published)</span>
+                    </label>
+
+                    <input type="email" id="email" name="email" placeholder="Type your email address here"
+                        autocomplete="email" required class="contact-input">
                 </div>
 
+                <!-- Review -->
                 <div>
-                    <label for="comment" class="block text-sm font-semibold mb-1">Your review</label>
-                    <textarea id="comment" name="comment" rows="5" required
-                        class="w-full rounded-lg border border-gray-300 px-4 py-2"></textarea>
+                    <label for="comment" class="block text-sm font-semibold mb-1" style="color:#1e3a8a;">
+                        Your Review
+                    </label>
+
+                    <textarea id="comment" name="comment" rows="7" required
+                        placeholder="Tell me about your experience with the project..."
+                        class="contact-input contact-textarea"></textarea>
                 </div>
 
-                <button type="submit" class="cws-btn" id="submit-btn">Submit Review</button>
+                <button type="submit" class="cws-btn" id="submit-btn">
+                    Submit Review
+                </button>
+
             </form>
+
         </section>
     </main>
 
-    <script src="js/nav.js"></script>
+    <script src="../js/nav.js"></script>
 
     <!-- Firebase (modular SDK via CDN) -->
     <script type="module">

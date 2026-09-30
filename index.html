@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Carson Web Studio — Creative Full-Stack Web Development, custom Django architectures, and responsive front-end design solutions based in Wilmslow, Cheshire.">
+    <meta name="description"
+        content="Carson Web Studio — Creative Full-Stack Web Development, custom Django architectures, and responsive front-end design solutions based in Wilmslow, Cheshire.">
     <title>Carson Web Studio</title>
 
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <script src="js/nav.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Barlow:wght@600&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="../js/nav.js"></script>
     <script type="module" src="js/reviews.js"></script>
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans text-base text-blue-900">
     <header>
-        <nav class="bg-white text-blue-900 shadow-lg">
+        <nav class="bg-white text-blue-900">
             <div class="max-w-6xl mx-auto px-4 flex items-center justify-between"
                 style="padding-top:1.5rem;padding-bottom:1.5rem;">
                 <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight nunito-header">Carson Web Studio</h1>
@@ -28,30 +31,8 @@
 
                 <ul class="nav-links flex space-x-6 font-barlow text-lg">
                     <li><a href="/index.html" class="cws-nav-link">Home</a></li>
-                    <li class="relative nav-dropdown">
-                        <div class="flex items-center gap-1">
-                            <a href="/projects.html" class="cws-nav-link">Projects</a>
-                            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Projects submenu"
-                                aria-expanded="false">▾</button>
-                        </div>
-                        <ul class="nav-dropdown-menu absolute left-0 w-56 bg-white rounded shadow-lg z-20">
-                            <li><a href="/projects/bolusengine.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">BolusEngine</a>
-                            </li>
-                            <li><a href="/projects/vinelife.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Vinelife Church</a>
-                            </li>
-                            <li><a href="/projects/bitesizechurch.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Bitesize Church</a>
-                            </li>
-                            <li><a href="/projects/shutterspace.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">ShutterSpace</a>
-                            </li>
-                            <li><a href="/projects/hackathon.html"
-                                    class="block px-4 py-2 hover:bg-purple-800 hover:text-white">Hackathon Projects</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><a href="#project-subnav-toggle" class="cws-nav-link nav-projects-toggle project-subnav">Projects</a></li>
+                    <li><a href="/services.html" class="cws-nav-link">Services & Pricing</a></li>
                     <li><a href="/about.html" class="cws-nav-link">About</a></li>
                     <li><a href="/contact.html" class="cws-nav-link">Contact</a></li>
                     <li><a href="/leave-review.html" class="cws-nav-link">Leave a Review</a></li>
@@ -59,6 +40,16 @@
             </div>
         </nav>
     </header>
+
+    <div class="project-subnav" id="project-subnav">
+        <ul>
+            <li><a href="/projects/bolusengine.html">BolusEngine</a></li>
+            <li><a href="/projects/vinelife.html">Vinelife Church</a></li>
+            <li><a href="/projects/bitesizechurch.html">Bitesize Church</a></li>
+            <li><a href="/projects/shutterspace.html">ShutterSpace</a></li>
+            <li><a href="/projects/hackathon.html">Hackathon Projects</a></li>
+        </ul>
+    </div>
 
     <main class="flex-1 w-full px-4 py-10">
 
@@ -75,66 +66,66 @@
                 </div>
         </section>
 
-    <section class="max-w-6xl mx-auto px-4 py-16">
-        <h2 class="text-4xl font-bold text-center mb-12 text-purple-800 nunito-header">Recent Work</h2>
+        <section class="max-w-6xl mx-auto px-4 py-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-purple-800 nunito-header">Recent Work</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
-                <div class="recent-work-thumb">
-                    <img src="images/bolusengine.webp" alt="BolusEngine app screenshot">
+                <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
+                    <div class="recent-work-thumb">
+                        <img src="images/bolusengine.webp" alt="BolusEngine app screenshot">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">BolusEngine</h3>
+                        <p class="text-base text-blue-900 mb-4">A personal health app that calculates meal and
+                            correction insulin doses from a built-in food library, with saved settings and a dose
+                            history log.</p>
+                        <a href="projects/bolusengine.html" class="cws-btn project-btn-wide">View Project</a>
+                    </div>
                 </div>
-                <div class="p-6 text-left">
-                    <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">BolusEngine</h3>
-                    <p class="text-base text-blue-900 mb-4">A personal health app that calculates meal and
-                        correction insulin doses from a built-in food library, with saved settings and a dose
-                        history log.</p>
-                    <a href="projects/bolusengine.html" class="cws-btn project-btn-wide">View Project</a>
+
+                <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
+                    <div class="recent-work-thumb">
+                        <img src="images/vinelifescreenshot.png" alt="Vinelife Church Wilmslow website">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">Vinelife Church</h3>
+                        <p class="text-base text-blue-900 mb-4">A live client website with a custom Wagtail CMS, giving
+                            the church full content control after handover.</p>
+                        <a href="projects/vinelife.html" class="cws-btn project-btn-wide">View Project</a>
+                    </div>
                 </div>
+
+                <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
+                    <div class="recent-work-thumb">
+                        <img src="images/bitesize.webp" alt="Bitesize Church website">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">Bitesize Church</h3>
+                        <p class="text-base text-blue-900 mb-4">A website prototype and CMS build, mapped out with
+                            Relume before development to match the church's real communication needs.</p>
+                        <a href="projects/bitesizechurch.html" class="cws-btn project-btn-wide">View Project</a>
+                    </div>
+                </div>
+
+                <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
+                    <div class="recent-work-thumb">
+                        <img src="images/shutterspace.jpg" alt="ShutterSpace photography portfolio platform">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">ShutterSpace</h3>
+                        <p class="text-base text-blue-900 mb-4">A photography portfolio platform for sharing work,
+                            building a profile and engaging with a community of photographers.</p>
+                        <a href="projects/shutterspace.html" class="cws-btn project-btn-wide">View Project</a>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
-                <div class="recent-work-thumb">
-                    <img src="images/vinelifescreenshot.png" alt="Vinelife Church Wilmslow website">
-                </div>
-                <div class="p-6 text-left">
-                    <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">Vinelife Church</h3>
-                    <p class="text-base text-blue-900 mb-4">A live client website with a custom Wagtail CMS, giving
-                        the church full content control after handover.</p>
-                    <a href="projects/vinelife.html" class="cws-btn project-btn-wide">View Project</a>
-                </div>
-            </div>
-
-            <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
-                <div class="recent-work-thumb">
-                    <img src="images/bitesize.webp" alt="Bitesize Church website">
-                </div>
-                <div class="p-6 text-left">
-                    <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">Bitesize Church</h3>
-                    <p class="text-base text-blue-900 mb-4">A website prototype and CMS build, mapped out with
-                        Relume before development to match the church's real communication needs.</p>
-                    <a href="projects/bitesizechurch.html" class="cws-btn project-btn-wide">View Project</a>
-                </div>
-            </div>
-
-            <div class="recent-work-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition bg-white">
-                <div class="recent-work-thumb">
-                    <img src="images/shutterspace.jpg" alt="ShutterSpace photography portfolio platform">
-                </div>
-                <div class="p-6 text-left">
-                    <h3 class="text-2xl font-bold text-blue-900 nunito-header mb-2">ShutterSpace</h3>
-                    <p class="text-base text-blue-900 mb-4">A photography portfolio platform for sharing work,
-                        building a profile and engaging with a community of photographers.</p>
-                    <a href="projects/shutterspace.html" class="cws-btn project-btn-wide">View Project</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="max-w-6xl mx-auto px-4 py-16">
-        <h2 class="text-4xl font-bold text-center mb-4 text-purple-800 nunito-header">Client Reviews</h2>
-        <div id="reviews-container"></div>
-    </section>
+        </section>
+        <section class="max-w-6xl mx-auto px-4 py-16">
+            <h2 class="text-4xl font-bold text-center mb-4 text-purple-800 nunito-header">Client Reviews</h2>
+            <div id="reviews-container"></div>
+        </section>
 
     </main>
 
